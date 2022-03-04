@@ -1,0 +1,169 @@
+/* RESET */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* COLOR */
+
+    /* Primary color */
+    --p50: #EEF2FF;
+    --p100: #E0E7FF;
+    --p200: #C7D2FE;
+    --p300: #A5B4FC;
+    --p400: #818CF8;
+    --p500: #6366F1;
+    --p600: #4F46E5;
+    --p700: #4338CA;
+    --p800: #3730A3;
+    --p900: #312E81;
+    /* Neutral color */
+    --n50: #F9FAFB;
+    --n100: #F3F4F6;
+    --n200: #E5E7EB;
+    --n300: #D1D5DB;
+    --n400: #9CA3AF;
+    --n500: #6B7280;
+    --n600: #4B5563;
+    --n700: #374151;
+    --n800: #1F2937;
+    --n900: #111827;
+    
+    /* ACENTS COLOR */
+    
+    /* Green color */
+    --g50: #ECFDF5;
+    --g100: #D1FAE5;
+    --g200: #A7F3D0;
+    --g300: #6EE7B7;
+    --g400: #34D399;
+    --g500: #10B981;
+    --g600: #059669;
+    --g700: #047857;
+    --g800: #065F46;
+    --g900: #064E3B;
+    /* Yellow color */
+    --y50: #FFFBEB;
+    --y100: #FEF3C7;
+    --y200: #FDE68A;
+    --y300: #FCD34D;
+    --y400: #FBBF24;
+    --y500: #F59E0B;
+    --y600: #D97706;
+    --y700: #B45309;
+    --y800: #92400E;
+    --y900: #78350F;
+    /* Red color */
+    --r50: #FEF2F2;
+    --r100: #FEE2E2;
+    --r200: #FECACA;
+    --r300: #FCA5A5;
+    --r400: #F87171;
+    --r500: #EF4444;
+    --r600: #DC2626;
+    --r700: #B91C1C;
+    --r800: #991B1B;
+    --r900: #7F1D1D;
+}
+
+/* PROVISOIRE */
+
+/* Flexbox */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+/* TITLE */
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Sora';
+    font-weight: 900;
+}
+/* TEXT */
+p {
+    font-family: 'Inter';font-size: 16px;
+    color: var(--n900);
+}
+/* BTN */
+.btn {
+    display: inline-block;
+    font-family: 'Inter';
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 13px 16px;
+    border: var(--n900) solid 2px;
+    min-height: 44px;
+    border-radius: 10px;
+    line-height: 20px;
+    text-decoration: none;
+}
+.btn__primary {
+    border: var(--p600) solid 2px;
+    background: var(--p600);
+    color: var(--n50);
+    cursor: pointer;
+}
+.btn__primary--disable {
+    border: var(--p400) solid 2px;
+    background: var(--p400);
+    color: var(--p100);
+}
+.btn__secondary {
+    background: var(--n900);
+    color: var(--n50);
+    cursor: pointer;
+}
+.btn__secondary--disable {
+    border: var(--n400) solid 2px;
+    background: var(--n400);
+    color: var(--n50);
+}
+.btn__neutral {
+    color: var(--n900);
+    background: inherit;
+    border: var(--n900) solid 2px;
+    cursor: pointer;
+}
+.btn__neutral--disable {
+    color: var(--n400);
+    background: inherit;
+    border: var(--n400) solid 2px;
+}
+.btn__danger {
+    color: var(--r400);
+    background: inherit;
+    border: var(--r300) solid 2px;
+    cursor: pointer;
+}
+.btn__danger:hover {
+    color: var(--n50);
+    background: var(--r400);
+    border: var(--r300) solid 2px;
+    transition: 250ms ease-in-out;
+}
+.btn__danger--disable {
+    color: var(--r300);
+    background: inherit;
+    border: var(--r300) solid 2px;
+    cursor: pointer;
+}
+.btn__linkdanger {
+    background: none;
+    border: none;
+    text-decoration: underline 2px;
+    color: var(--r400);
+    cursor: pointer;
+}
+.btn__linkdanger--disable {
+    background: none;
+    border: none;
+    text-decoration: underline 2px;
+    color: var(--r300);
+}

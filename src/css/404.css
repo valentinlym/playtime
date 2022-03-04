@@ -1,0 +1,40 @@
+body{
+    background: var(--r100);"
+}
+header {
+    padding: 24px;
+}
+header img {
+    width: 104px;
+}
+.container {
+    flex-direction: column;
+    display: flex;
+    width: 290px;
+}
+.container__img {
+    display: flex;
+    justify-content: center;
+}
+.img404 {
+    font-family: 'Sora';
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 120px;
+    color: var(--r400);
+    margin-bottom: 40px;
+}
+.container__txt {
+    display: flex;
+    justify-content: center;
+}
+p {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+@media screen and (min-width: 700px;) {
+    .container {
+        flex-direction: row;
+    }
+}
