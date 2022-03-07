@@ -33,8 +33,21 @@ p {
     margin-bottom: 16px;
 }
 
-@media screen and (min-width: 700px;) {
+.btn {
+    display: block;
+}
+
+@media screen and (min-width:700px) {
     .container {
         flex-direction: row;
+        width: max-content;
+        margin: 0 24px;
+        align-items: baseline;
+    }
+    .container__img {
+        margin-right: 40px;
+    }
+    .btn {
+        display: inline-block;
     }
 }

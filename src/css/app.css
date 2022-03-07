@@ -93,6 +93,7 @@ p {
 /* BTN */
 .btn {
     display: inline-block;
+    text-align: center;
     font-family: 'Inter';
     border-radius: 4px;
     font-weight: 700;
