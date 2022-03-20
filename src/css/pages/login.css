@@ -1,0 +1,25 @@
+body {
+    background: var(--n50);
+}
+header {
+    background: var(--n900);
+}
+
+.login {
+    padding: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 12px 0;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
