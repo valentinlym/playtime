@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="src/img/icon_32x32.jpg">
+    <link rel="icon" href="../src/img/icon_32x32.jpg">
     <link rel="apple-touch-icon-precomposed" sizes="114x114"
-    href="src/img/icon_114x114.jpg" type="image/jpg">
+    href="../src/img/icon_114x114.jpg" type="image/jpg">
     <!-- CSS component -->
     <link rel="stylesheet" href="../src/css/app.css">
     <!-- \\ ENTETE COMMUNE // -->
     <title>TEST CSS COMPONENT</title>
-    <link rel="stylesheet" href="../src/css/composantcss.css">
+    <link rel="stylesheet" href="../src/css/pages/testcss.css">
 </head>
 <body>
     <h1 class="title">Composant css</h1>
@@ -28,7 +28,32 @@
     </div>
     <h2>II. Les textes</h2>
     <div class="box">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio explicabo quisquam rem, fuga cupiditate eius quia ad corporis ratione atque eum obcaecati aut praesentium nesciunt cumque sunt nemo ab eligendi!</p>
+        <p class="text-xs">text-xs</p>
+        <p class="text-base n500">Font Size: 0.75rem | Line Height: 1rem</p>
+        <p class="text-sm">text-sm</p>
+        <p class="text-base n500">Font Size: 0.875rem | Line Height: 1.25rem</p>
+        <p class="text-base">text-base</p>
+        <p class="text-base n500">Font Size: 1rem | Line Height: 1.5rem</p>
+        <p class="text-lg">text-lg</p>
+        <p class="text-base n500">Font Size: 1.125rem | Line Height: 1.75rem</p>
+        <p class="text-xl">text-xl</p>
+        <p class="text-base n500">Font Size: 1.25rem | Line Height: 1.75rem</p>
+        <p class="text-2xl">text-2xl</p>
+        <p class="text-base n500">Font Size: 1.5rem | Line Height: 2rem</p>
+        <p class="text-3xl">text-3xl</p>
+        <p class="text-base n500">Font Size: 1.875rem | Line Height: 2.25rem</p>
+        <p class="text-4xl">text-4xl</p>
+        <p class="text-base n500">Font Size: 2.25rem | Line Height: 2.5rem</p>
+        <p class="text-5xl">text-5xl</p>
+        <p class="text-base n500">Font Size: 3rem | Line Height: 3rem</p>
+        <p class="text-6xl">text-6xl</p>
+        <p class="text-base n500">Font Size: 3.75rem | Line Height: 3.75rem</p>
+        <p class="text-7xl">text-7xl</p>
+        <p class="text-base n500">Font Size: 4.5rem | Line Height: 4.5rem</p>
+        <p class="text-8xl">text-8xl</p>
+        <p class="text-base n500">Font Size: 6rem | Line Height: 6rem</p>
+        <p class="text-9xl">text-9xl</p>
+        <p class="textFont-base n500">Font Size: 8rem | Line Height: 8rem</p>
     </div>
     <h2>III. Les boutons</h2>
     <div class="box-btn">
@@ -46,6 +71,40 @@
         <br>
         <button class="btn btn__linkdanger">Se connecter</button>
         <button class="btn btn__linkdanger--disable">Se connecter</button>
+    </div>
+    <h2>Divers</h2>
+    <div class="box">
+        <div class="mb">
+            <p class="lab lab--primary">Label</p>
+            <p class="lab lab--neutral">Label</p>
+            <p class="lab lab--green">Label</p>
+            <p class="lab lab--yellow">Label</p>
+            <p class="lab lab--red">Label</p>
+        </div>
+        <div>
+            <input class="xs-mb" type="text" placeholder="Recherche">
+            <input class="xs-mb" type="password" placeholder="Password">
+            <input class="xs-mb" type="number">
+            <select class="xs-mb" name="" id="">
+                <option value="">Select 1</option>
+                <option value="">Select 2</option>
+                <option value="">Select 3</option>
+                <option value="">Select 4</option>
+                <option value="">Select 5</option>
+            </select>
+            <select multiple class="xs-mb" name="" id="">
+                <option value="">Select 1</option>
+                <option value="">Select 2</option>
+                <option value="">Select 3</option>
+                <option value="">Select 4</option>
+                <option value="">Select 5</option>
+            </select>
+            <details>
+                <summary class="title title-lg">Details</summary>
+                <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ipsum in nesciunt culpa repudiandae id atque fugit, cumque soluta quam facilis officiis, quia temporibus repellat dolore quis deserunt minus ipsa?</p>
+            </details>
+            <hr>
+        </div>
     </div>
 </body>
 </html>

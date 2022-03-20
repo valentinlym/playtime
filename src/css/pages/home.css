@@ -1,0 +1,147 @@
+body {
+    background: var(--n900);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+header img {
+    width: 104px;
+}
+
+
+
+.p500 {
+    color: var(--p400);
+}
+
+.intro {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    background: var(--n50);
+}
+.intro_txt {
+    min-width: 425px;
+    max-width: 765px;
+}
+.intro h1 {
+    margin-bottom: 8px;
+}
+
+.intro p {
+    margin-bottom: 30px;
+}
+
+
+.illu {
+    display: flex;
+    justify-content: space-around;
+    padding: 48px 8px;
+}
+
+.cover {
+    background: var(--n300);
+    width: 100px;
+    height: 150px;
+    border-radius: 4px;
+}
+.cover img {
+    width: 100px;
+    height: 150px;
+}
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 70px;
+    background: var(--p400);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon {
+    background: var(--n300);
+    width: 100px;
+    height: 100px;
+    border-radius: 24px;
+    margin-bottom: 8px;
+}
+
+.icon--margin {
+    margin: 16px 0;
+
+}
+
+.faq {
+    background: var(--n50);
+    padding: 40px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.questions {
+    margin: 16px 0;
+    padding: 10px;
+    width: 350px;
+}
+
+.questions p {
+    color: var(--n600);
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+footer a {
+    color: var(--n500);
+    text-align: center;
+    font-weight: 400;
+}
+footer a:hover {
+    text-decoration: underline 2px;
+    color: var(--g300);
+}
+
+@media screen and (min-width: 830px) {
+    .intro {
+        padding: 80px;
+    }
+    .illu {
+        padding: 80px;
+        
+    }
+    .cover {
+        width: 180px;
+        height: 270px;
+    }
+    .cover img {
+        width: 180px;
+        height: 270px;
+    }
+    .stats {
+        padding: 80px 70px;
+        flex-direction: row;
+    }
+    .faq {
+        padding: 80px 0;
+    }
+}
