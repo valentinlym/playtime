@@ -97,11 +97,7 @@ header img {
 .questions {
     margin: 16px 0;
     padding: 10px;
-    width: 350px;
-}
-
-.questions p {
-    color: var(--n600);
+    width: 400px;
 }
 
 footer {
@@ -143,5 +139,8 @@ footer a:hover {
     }
     .faq {
         padding: 80px 0;
+    }
+    .questions {
+        width: 700px;
     }
 }
