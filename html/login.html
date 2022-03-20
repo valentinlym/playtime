@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-     <!-- ENTETE COMMUNE - V.0.1 -->
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="icon" href="../src/img/icon_114x114.png">
-     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../src/img/icon_114x114.jpg" type="image/jpg">
-     <!-- CSS component -->
-     <link rel="stylesheet" href="../src/css/app.css">
-     <!-- \\ ENTETE COMMUNE // -->
-     <title>Play Time</title>
-     <link rel="stylesheet" href="../src/css/pages/login.css">
+    <!-- ENTETE COMMUNE - V.0.1 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../src/img/icon_114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../src/img/icon_114x114.jpg" type="image/jpg">
+    <!-- CSS component -->
+    <link rel="stylesheet" href="../src/css/app.css">
+    <!-- \\ ENTETE COMMUNE // -->
+    <title>Play Time</title>
+    <link rel="stylesheet" href="../src/css/pages/login.css">
 </head>
+
 <body>
+
     <header>
         <img src="../src/img/logo.svg" alt="logo de play time">
     </header>
@@ -21,18 +24,24 @@
     <div class="container">
         <div class="register">
             <h2>S’inscrire</h2>
+            <form action="">
+                <input required type="email" placeholder="email">
+                <input required type="password" name="pwd" id="pwd" placeholder="Mot de passe">
+                <input required type="password" name="pwdC" id="pwdC" placeholder="Mot de passe (confirmation)">
+                <button class="btn btn__secondary--disable">S'inscrire</button>
+            </form>
         </div>
         <div class="login">
             <h2>Se connecter</h2>
             <form action="" method="post">
                 <input required type="email" placeholder="email">
                 <input required type="password" name="password" id="password" placeholder="Mot de passe">
-                <div class="login-btn">
-                    <p class="text text-base">Mot de passe oublier ? <a>Contactez nous</</a></p>
-                    <button class="btn btn__secondary--disable">Se connecter</button>
-                </div>
+                <p class="text text-base xlmt">Mot de passe oublier ? <a href="mailto:support@playtime.fr">Contactez nous</a>
+                </p>
+                <button class="btn btn__secondary--disable sxmt">Se connecter</button>
             </form>
         </div>
     </div>
 </body>
+
 </html>
