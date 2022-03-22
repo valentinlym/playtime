@@ -98,7 +98,6 @@ p {
 
 /* Text */
 .text-xs {
-    font-weight: 800;
     font-size: 0.75rem;
     line-height: 1rem;
 }
@@ -211,13 +210,13 @@ p {
     text-align: center;
     font-family: 'Inter';
     border-radius: 4px;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 16px;
     padding: 13px 16px;
     border: var(--n900) solid 2px;
     min-height: 44px;
-    border-radius: 10px;
-    line-height: 20px;
+    border-radius: 6px;
+    line-height: 16px;
     text-decoration: none;
 }
 .btn__primary {
@@ -366,4 +365,32 @@ hr {
 a {
     color: var(--p500);
     cursor: pointer;
+}
+
+/* Header */
+
+header {
+    padding: 24px;
+}
+header img {
+    width: 80px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+footer a {
+    color: var(--n500);
+    text-align: center;
+    font-weight: 400;
+}
+footer a:hover {
+    text-decoration: underline 2px;
+    color: var(--g300);
 }

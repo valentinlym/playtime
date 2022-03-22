@@ -1,12 +1,7 @@
 body{
     background: var(--r100);"
 }
-header {
-    padding: 24px;
-}
-header img {
-    width: 104px;
-}
+
 .container {
     flex-direction: column;
     display: flex;
@@ -21,7 +16,7 @@ header img {
     font-weight: 900;
     font-size: 120px;
     line-height: 120px;
-    color: var(--r500);
+    color: var(--r400);
     margin-bottom: 40px;
 }
 .container__txt {
