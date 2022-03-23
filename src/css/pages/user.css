@@ -1,0 +1,25 @@
+body {
+    background: var(--n900);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro {
+    background: var(--n50);
+}
+
+.title {
+    display: flex;
+    
+    padding: 48px 20px;
+}
+
+.user-info {
+    background: p600;
+    padding-left: 60px;
+    display:inline-flex;
+    align-items:flex-start;
+}
