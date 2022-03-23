@@ -1,12 +1,7 @@
 body{
     background: var(--r100);"
 }
-header {
-    padding: 24px;
-}
-header img {
-    width: 104px;
-}
+
 .container {
     flex-direction: column;
     display: flex;
