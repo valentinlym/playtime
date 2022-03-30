@@ -1,0 +1,24 @@
+body {
+    background: var(--n900);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.p500 {
+    color: var(--p400);
+}
+.intro {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    background: var(--n50);
+}
+.intro_txt {
+    min-width: 425px;
+    max-width: 765px;
+
+}
