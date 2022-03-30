@@ -1,0 +1,74 @@
+body {
+    background: var(--n900);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro {
+    background: var(--n50);
+    overflow:auto;
+}
+
+.title-1 {
+    display: flex;
+    padding: 40px 40px;
+}
+
+.user-info {
+    padding-left: 40px;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.info-user {
+    padding-left: 16px;
+}
+
+.user-top-1 {
+    display:inline-flex;
+    align-items:center;
+}
+
+.user-top-2 {
+    float: right;
+}
+
+.user-box {
+    border-spacing: 8px;
+    width: 456px;
+    text-align: center;
+    
+}
+
+.user-box-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.user-nb-game {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    border-radius: 10px;
+    background-color: var(--p100);
+    padding: 8px;
+    width: 30%;
+    text-align: center;
+}
+
+.illu {
+    display: flex;
+}
+
+.cover {
+    padding: 40px;
+}
+
+.p500 {
+    color: var(--p400);
+}
