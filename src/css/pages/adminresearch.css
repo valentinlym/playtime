@@ -1,0 +1,71 @@
+header {
+    background: var(--n900);
+}
+
+h1 {
+    color: var(--y100);
+}
+
+h2 {
+    margin-top: 16px;
+}
+
+.container {
+    padding: 24px 24px 0 24px  ;
+}
+
+.banner {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+}
+/* .table */
+.table {
+    margin-top: 8px;
+    /* DEBUG */
+    /* background: var(--p50);  */
+}
+.theader {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 600;
+}
+.trow {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    background: inherit;
+}
+.tbody {
+    margin-top: 8px;
+}
+.tbody > a:nth-child(odd) {
+    background: var(--y100);
+}
+.tbody > a:nth-child(even) {
+    background: var(--y300);
+}
+
+.table a {
+    text-decoration: none;
+    
+}
+.table a:hover {
+    font-weight: 600;
+}
+
+.tname,
+.tdate {
+    display: none;
+}
+
+
+@media screen and (min-width: 700px) {
+    .banner {
+        display: none;
+    }
+    .tname,
+    .tdate {
+        display: block;
+    }
+}
