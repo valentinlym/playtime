@@ -1,0 +1,23 @@
+.cover {
+    background: var(--n300);
+    width: 100px;
+    height: 150px;
+    margin-right: 12px;
+}
+img.cover {
+    width: 100px;
+    height: 150px;
+}
+
+/* Slider */
+.slider__container {
+    display: flex;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    margin-top: 4px;
+}
+.slider__container::-webkit-scrollbar {
+    display: none;
+}
