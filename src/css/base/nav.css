@@ -1,0 +1,56 @@
+nav.desktop {
+    display: none;
+}
+
+/* Place the navbar at the bottom of the page, and make it stick */
+nav.mobile {
+    background-color: var(--n900);
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow-x: none;
+}
+
+
+/* Style the links inside the navigation bar */
+nav.mobile a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav.mobile a.active img {
+    fill: #FFF;
+}
+
+body .main {
+    padding:24px 0 64px 16px;
+}
+
+@media screen and (min-width: 500px) {
+    body .main {
+        padding: 12px;
+    }
+    nav.mobile {
+        display: none;
+    }
+
+    nav.desktop {
+        display: block;
+    }
+
+    nav .active {
+        text-decoration: underline;
+        font-weight: 500;
+        color: var(--n50);
+    }
+
+    header nav :nth-child(2) {
+        margin: 0 40px;
+    }
+}

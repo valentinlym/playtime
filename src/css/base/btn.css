@@ -1,0 +1,112 @@
+/* BTN */
+.btn {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Inter';
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 13px 16px;
+    border: var(--n900) solid 2px;
+    min-height: 44px;
+    line-height: 16px;
+    text-decoration: none;
+}
+.btn__primary {
+    border: var(--p400) solid 2px;
+    background: var(--p400);
+    color: var(--n50);
+    cursor: pointer;
+}
+.btn__primary:hover {
+    background: var(--p500);
+    border: var(--p500) solid 2px;
+}
+.btn__primary:disabled {
+    border: var(--p400) solid 2px;
+    background: var(--p400);
+    color: var(--p100);
+}
+.btn__secondary {
+    background: var(--n900);
+    color: var(--n50);
+    cursor: pointer;
+}
+.btn__secondary:disabled {
+    border: var(--n400) solid 2px;
+    background: var(--n400);
+    color: var(--n50);
+    cursor: default;
+}
+.btn__neutral {
+    color: var(--n900);
+    background: inherit;
+    border: var(--n900) solid 2px;
+    cursor: pointer;
+}
+.btn__neutral:disabled {
+    color: var(--n400);
+    background: inherit;
+    border: var(--n400) solid 2px;
+}
+.btn__danger {
+    color: var(--r400);
+    background: inherit;
+    border: var(--r300) solid 2px;
+    cursor: pointer;
+}
+.btn__danger:hover {
+    color: var(--n50);
+    background: var(--r400);
+    border: var(--r300) solid 2px;
+    transition: 250ms ease-in-out;
+}
+.btn__danger:disabled {
+    color: var(--r300);
+    background: inherit;
+    border: var(--r300) solid 2px;
+    cursor: pointer;
+}
+.btn__linkdanger {
+    background: none;
+    border: none;
+    text-decoration: underline 2px;
+    color: var(--r400);
+    cursor: pointer;
+}
+.btn__linkdanger:disabled {
+    background: none;
+    border: none;
+    text-decoration: underline 2px;
+    color: var(--r300);
+}
+
+/* CTA - Status game (gcta > gstatus) */
+.gcta {
+    display: flex;
+    gap: 8px;
+}
+.gstatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 109px;
+    height: 72px;
+    border-radius: 6px;
+    background: var(--p100);
+    cursor: pointer;
+}
+.gstatus_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gstatus img {
+    width: 24px;
+    height: 24px;
+}
+
+.gstatus:hover {
+    border: var(--p400) solid 2px;
+}

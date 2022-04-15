@@ -1,0 +1,32 @@
+ body .main {
+    padding: 100px 20px 20px 20px;
+}
+.title {
+    margin-bottom: 16px;
+}
+.box {
+    margin:20px;
+    padding: 16px 10px;
+}
+.box-p {
+    border: var(--p300) solid 3px;
+}
+.box-y {
+    border: var(--y500) solid 3px;
+    border-radius: 4px;
+}
+button {
+    margin: 8px 16px 8px 0;
+}
+.xs-mb {
+    margin-bottom: 8px;
+}
+.mb {
+    margin-bottom: 16px;
+}
+.boxheader header {
+    margin-bottom: 8px;
+}
+.gradient {
+    background: url(../../img/gradient-blue.jpg) center center / cover no-repeat fixed;
+}
