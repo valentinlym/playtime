@@ -106,7 +106,7 @@ require '../components/head.php';
     <footer>
         <div class="footer-text">
             <p class="sora text-p400 text-base bold">Play Time</p>
-            <a href="#">Projet Univesitaire</a>
+            <a href="https://github.com/valentinlym/playtime" target="_bank">Projet Univesitaire</a>
         </div>
     </footer>
 </body>
