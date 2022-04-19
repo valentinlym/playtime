@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <!-- ENTETE COMMUNE - V.0.1 -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../src/img/icon_114x114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../src/img/icon_114x114.jpg" type="image/jpg">
-    <!-- CSS component -->
-    <link rel="stylesheet" href="../src/css/app.css">
-    <!-- \\ ENTETE COMMUNE // -->
-    <title>Play Time</title>
-    <link rel="stylesheet" href="../src/css/page/game.css">
-</head>
+<?php
+$title = "game";
+$css = "";
+require '../components/head.php';
+?>
 
 <body class="n900">
     <header class="fb-sb n900">

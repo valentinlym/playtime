@@ -1,24 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <!-- ENTETE COMMUNE - V.0.1 -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../src/img/icon_114x114.jpg">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../src/img/icon_114x114.jpg" type="image/jpg">
-    <!-- CSS component -->
-    <link rel="stylesheet" href="../src/css/app.css">
-    <!-- \\ ENTETE COMMUNE // -->
-    <title>Play Time</title>
-    <link rel="stylesheet" href="../src/css/page/home.css">
-</head>
+<?php
+$title = "home";
+$css = "";
+require '../components/head.php';
+?>
 
 <body>
     <header class="fixed n900">
-        <img src="../src/img/logo.svg" alt="logo de play time">
-        <a class="btn btn__primary" href="login.html">Se connecter</a>
+        <img src="../../src/img/logo.svg" alt="logo de play time">
+        <a class="btn btn__primary" href="login.php">Se connecter</a>
     </header>
 
     <div class="fmain">
@@ -33,23 +22,23 @@
                     incididunt ut labore et
                     dolore magna aliqua.
                 </p>
-                <a class="btn btn__secondary" href="login.html">Commencer</a>
+                <a class="btn btn__secondary" href="login.php">Commencer</a>
             </div>
         
         </div>
         <div class="illu">
             <div class="slider">
                 <div class="slider__container">
-                    <img src="../src/img/cover_3.jpg" class="cover">
-                    <img src="../src/img/cover_4.jpg"  class="cover">
-                    <img src="../src/img/cover_1.jpg"  class="cover">
-                    <img src="../src/img/cover_2.jpg"  class="cover">
-                    <img src="../src/img/cover_3.jpg"  class="cover">
-                    <img src="../src/img/cover_4.jpg"  class="cover">
-                    <img src="../src/img/cover_1.jpg"  class="cover">
-                    <img src="../src/img/cover_2.jpg"  class="cover">
-                    <img src="../src/img/cover_3.jpg"  class="cover">
-                    <img src="../src/img/cover_4.jpg"  class="cover">
+                    <img src="../../src/img/cover_3.jpg" class="cover">
+                    <img src="../../src/img/cover_4.jpg"  class="cover">
+                    <img src="../../src/img/cover_1.jpg"  class="cover">
+                    <img src="../../src/img/cover_2.jpg"  class="cover">
+                    <img src="../../src/img/cover_3.jpg"  class="cover">
+                    <img src="../../src/img/cover_4.jpg"  class="cover">
+                    <img src="../../src/img/cover_1.jpg"  class="cover">
+                    <img src="../../src/img/cover_2.jpg"  class="cover">
+                    <img src="../../src/img/cover_3.jpg"  class="cover">
+                    <img src="../../src/img/cover_4.jpg"  class="cover">
                 </div>
             </div>
         </div>
