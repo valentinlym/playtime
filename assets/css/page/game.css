@@ -1,0 +1,58 @@
+body .main {
+    padding-right: 12px;
+}
+
+.ghead {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 150px;
+    margin-bottom: 16px;
+}
+
+.gcta {
+    margin: 8px 0;
+}
+
+.gtitle {
+    margin-left: 8px;
+    grid-area: 0 2;
+}
+
+.details,
+.description {
+    margin-bottom: 16px;
+}
+.lheader,
+.text,
+.audio {
+    text-align: center;
+}
+.lrow {
+    display: grid;
+    font-weight: 600;
+    grid-template-columns: 40px repeat(2, 1fr);
+    margin: 8px 0;
+}
+input,
+select {
+    margin: 8px 0;
+}
+button {
+    margin-top: 12px;
+}
+label.newgame {
+    margin-left: 4px;
+}
+@media screen and (min-width: 450px) {
+    .gtitle {
+        width: 215px;
+        height: 150px;
+    }
+}
+@media screen and (min-width: 600px) {
+    .info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}

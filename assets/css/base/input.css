@@ -1,0 +1,29 @@
+/* Input */
+
+input,
+textarea {
+    border: var(--n400) solid 2px;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 1rem;
+    font-family: 'Inter';
+    color: var(--n900);
+}
+input::placeholder {
+    font-size: 1rem;
+    font-family: 'Inter';
+}
+
+select {
+    border: var(--n400) solid 2px;
+    border-radius: 8px;
+    background: none;
+    display: block;
+    font-size: 1rem;
+    font-family: 'Inter';
+    padding: 8px;
+}
+/* TODO: Provisoire */
+input:invalid {
+    border: var(--r300) solid 2px;
+}

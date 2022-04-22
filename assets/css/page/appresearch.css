@@ -1,0 +1,18 @@
+.main {
+    padding: 24px 16px;
+    min-height: 85vh;
+}
+.result {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+.result span {
+    margin-left: 8px;
+}
+.result-game {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 12px;
+    max-width: 2000px;
+    margin: 0 auto 0;
+}

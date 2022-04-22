@@ -4,7 +4,7 @@ USE playtime;
 
 CREATE TABLE users (
     iduser int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    email int (255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
     pseudo VARCHAR(30) NOT NULL,
     password VARCHAR(255) NOT NULL,
     avatar VARCHAR(30) NOT NULL,

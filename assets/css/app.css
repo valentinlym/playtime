@@ -1,0 +1,66 @@
+@import url(base/color.css);
+@import url(base/font.css);
+@import url(base/btn.css);
+@import url(base/input.css);
+
+@import url(base/header.css);
+@import url(base/nav.css);
+@import url(base/cover.css);
+
+@import url(base/divers.css);
+
+/* RESET */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* flexbox */
+.fb {
+    display: flex;
+}
+.fb-sb {
+    justify-content: space-between;
+}
+.fb-sa {
+    justify-content: space-around;
+}
+.fb-dc {
+    flex-direction: column;
+}
+.fb-main {
+    justify-content: center;
+}
+.fb-cross {
+    align-items: center;
+}
+
+/* Fixed */
+.fixed {
+    position: fixed;
+    width:  100%;
+    z-index: 10;
+}
+/* main with header fixed */
+.fmain {
+    padding-top: 80px;
+}
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    background: var(--n900);
+}
+footer a {
+    text-decoration: underline;
+}
+footer a:hover {
+    color: var(--g300);
+}
