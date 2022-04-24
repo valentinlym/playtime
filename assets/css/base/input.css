@@ -23,7 +23,3 @@ select {
     font-family: 'Inter';
     padding: 8px;
 }
-/* TODO: Provisoire */
-input:invalid {
-    border: var(--r300) solid 2px;
-}

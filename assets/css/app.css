@@ -64,3 +64,26 @@ footer a {
 footer a:hover {
     color: var(--g300);
 }
+
+/* Bnner danger */
+.banner-box {
+    margin: 0 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+.banner {
+    border-radius: 4px;
+    padding: 8px;
+}
+.banner p {
+    font-family: monospace;
+}
+.banner-danger {
+    background: var(--r50);
+    border: var(--r300) solid 2px;
+}
+.banner-success {
+    background: var(--g50);
+    border: var(--g300) solid 2px;
+}
