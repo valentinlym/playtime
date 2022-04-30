@@ -14,7 +14,7 @@ Play Time est un outil permettant aux passionnés de jeux vidéo de faire un sui
 
 ## Avancement du projet
 
-Retrouver les versions sorties et en cours de développement dans ce [Notion >](https://www.notion.so/Play-Time-V-0-1-1f001d2f33534fedb96affc84a21fc2a)
+Retrouver les versions sorties et en cours de développement dans ce [Notion >](https://valentinlym.notion.site/Play-Time-V-0-1-1f001d2f33534fedb96affc84a21fc2a)
 
 ## Php Doc
 
