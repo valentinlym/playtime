@@ -1,6 +1,6 @@
 <?php
-$title = "research";
-$css = "app";
+$title = "recherche";
+$css = "appresearch";
 require '../components/head.php';
 ?>
 
@@ -17,26 +17,26 @@ require '../components/head.php';
             <span class="lab n200 text-n600">+20</span>
         </div>
         <div class="result-game">
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-            <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <a href="game.php?path=recherche"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
         </div>
     </div>
 </body>

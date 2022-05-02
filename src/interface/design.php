@@ -189,26 +189,26 @@ require '../components/head.php';
         <div class="slider">
             <h3>Title slider</h3>
             <div class="slider__container">
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
+                <a href="game.php"><img src="../../assets/img/cover.svg" class="cover"></a>
             </div>
         </div>
     </div>

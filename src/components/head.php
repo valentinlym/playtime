@@ -12,5 +12,5 @@
     <link rel="stylesheet" href="../../assets/css/app.css">
     <!-- \\ ENTETE COMMUNE // -->
     <title>Play Time • <?= ucfirst($title) ?></title>
-    <link rel="stylesheet" href="../../assets/css/page/<?= $css . $title ?>.css">
+    <link rel="stylesheet" href="../../assets/css/page/<?= $css ?>.css">
 </head>

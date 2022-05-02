@@ -48,7 +48,9 @@ header {
     align-items: center;
     text-align: center;
 }
-
+.gstatus {
+    margin-bottom: 16px;
+}
 .icon {
     background: var(--n300);
     width: 100px;

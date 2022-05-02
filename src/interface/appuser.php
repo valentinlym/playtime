@@ -1,6 +1,6 @@
 <?php
-$title = "user";
-$css = "app";
+$title = "utilisateur";
+$css = "appuser";
 require '../components/head.php';
 ?>
 
@@ -37,42 +37,42 @@ require '../components/head.php';
         <details>
             <summary class="text-2xl">En vue</summary>
             <div class="slider__container">
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
             </div>
         </details>
         <hr>
         <details>
             <summary class="text-2xl">En cours</summary>
             <div class="slider__container">
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
             </div>
         </details>
         <hr>
         <details>
             <summary class="text-2xl">Terminé</summary>
             <div class="slider__container">
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.html"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
             </div>
         </details>
         <hr>

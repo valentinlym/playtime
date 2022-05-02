@@ -1,8 +1,8 @@
 <?php
 error_reporting(E_ALL);
 session_start();
-$title = "login";
-$css = "";
+$title = "login-register";
+$css = "login";
 require '../components/head.php';
 
 // Connection à la BD
@@ -81,17 +81,18 @@ function email($type) {
         </div>
         <div class="login">
             <h2>Se connecter</h2>
-            <form action="../scripts/register.php" method="POST">
-                <input required type="<?= email("login") ?>" placeholder="email"
+            <form action="../scripts/login.php" method="POST">
+                <input required type="<?= email("login") ?>"  name="email" placeholder="email"
                  pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" id="email-login" onchange="verify()">
-                <input required type="password" name="password" id="pwd-login" placeholder="Mot de passe" onfocus="verify()">
+                <input required type="password" name="pwd" id="pwd-login" placeholder="Mot de passe" onchange="verify()">
                 <p class="text text-base xlmt">Mot de passe oublié ? <a class="text-p500 underline" href="mailto:support@playtime.fr">Contactez-nous</a>
                 </p>
                 <button type="submit" class="btn btn__secondary sxmt" id="btn-login">Se connecter</button>
             </form>
         </div>
     </div>
-     
+    <pre>
+     </pre>
     <script>
         const emailRegister = document.getElementById('email-register');
         const pwd1Register = document.getElementById('pwd1-register');

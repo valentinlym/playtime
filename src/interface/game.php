@@ -1,28 +1,54 @@
 <?php
-$title = "game";
-$css = "";
+$title = "jeu";
+$css = "game";
+(isset($_GET['path'])) ? $path = $_GET['path'] : $path = "";
 require '../components/head.php';
+// TODO: Créer une requete sql avec le non du jeu
 ?>
 
 <body class="n900">
     <header class="fb-sb n900">
-        <h1 class="title-4xl text-n50">Game</H1>
+        <h1 class="title-4xl text-n50"><?= ucfirst($title) ?></H1>
         <nav class="desktop">
-            <a class="active" href="apphome.html">Home</a>
-            <a href="appresearch.html">Research</a>
-            <a href="appuser.html">User</a>
+            <a <?php if ($path == "accueil") {
+                    echo "class='active'";
+                } else {
+                    echo "";
+                } ?> href="../interface/apphome.php">Accueil</a>
+            <a <?php if ($path == "recherche") {
+                    echo "class='active'";
+                } else {
+                    echo "";
+                } ?> href="../interface/appresearch.php">Recherche</a>
+            <a <?php if ($path == "utilisateur") {
+                    echo "class='active'";
+                } else {
+                    echo "";
+                } ?> href="../interface/appuser.php">Utilisateur</a>
         </nav>
     </header>
 
     <nav class="mobile fb fb-sa">
-        <a class="home active" href="apphome.html">
-            <img src="../assets/icons/act-home.svg" alt="home icon">
+        <a href="apphome.php">
+            <img src="../../assets/icons/<?php if ($path == "accueil") {
+                                                echo "act-";
+                                            } else {
+                                                echo "";
+                                            } ?>home.svg" alt="home icon">
         </a>
-        <a href="appresearch.html">
-            <img src="../assets/icons/research.svg" alt="esearch icon">
+        <a href="appresearch.php">
+            <img src="../../assets/icons/<?php if ($path == "recherche") {
+                                                echo "act-";
+                                            } else {
+                                                echo "";
+                                            } ?>research.svg" alt="esearch icon">
         </a>
-        <a href="appuser.html">
-            <img src="../assets/icons/user.svg" alt="user icon">
+        <a href="appuser.php">
+            <img src="../../assets/icons/<?php if ($path == "utilisateur") {
+                                                echo "act-";
+                                            } else {
+                                                echo "";
+                                            } ?>user.svg" alt="user icon">
         </a>
     </nav>
 
@@ -39,23 +65,29 @@ require '../components/head.php';
                 <span class="lab text-sm text-n600 n200">Wii U</span>
             </div>
             <div class="gcta">
-                <div class="gstatus">
-                    <div class="gstatus_content">
-                        <img src="../assets/icons/eye-open.svg" alt="eye open icon">
-                        <span class="text-sm text-p500">En vue</span>
-                    </div>
+                <div class="gstatus active">
+                    <a href="?status=0">
+                        <div class="gstatus_content">
+                            <img src="../../assets/icons/eye-open.svg" alt="eye open icon">
+                            <span class="gstatus-vue text-sm text-p500">En vue</span>
+                        </div>
+                    </a>
                 </div>
                 <div class="gstatus">
-                    <div class="gstatus_content">
-                        <img src="../assets/icons/rocket.svg" alt="rocket icon">
-                        <span class="text-sm text-p500">En cours</span>
-                    </div>
+                    <a href="?status=1">
+                        <div class="gstatus_content">
+                            <img src="../../assets/icons/rocket.svg" alt="rocket icon">
+                            <span class="text-sm text-p500">En cours</span>
+                        </div>
+                    </a>
                 </div>
                 <div class="gstatus">
-                    <div class="gstatus_content">
-                        <img src="../assets/icons/done.svg" alt="rocket icon">
-                        <span class="text-sm text-p500">Terminer</span>
-                    </div>
+                    <a href="?status=3">
+                        <div class="gstatus_content">
+                            <img src="../../assets/icons/done.svg" alt="rocket icon">
+                            <span class="text-sm text-p500">Terminer</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -113,28 +145,28 @@ require '../components/head.php';
                             <div class="lrow">
                                 <p class="langue">Français</p>
                                 <div class="text">
-                                    <img src="../assets/icons/done--dark.svg" alt="close icon">
+                                    <img src="../../assets/icons/done--dark.svg" alt="close icon">
                                 </div>
                                 <div class="audio">
-                                    <img src="../assets/icons/done--dark.svg" alt="done icon">
+                                    <img src="../../assets/icons/done--dark.svg" alt="done icon">
                                 </div>
                             </div>
                             <div class="lrow">
                                 <p class="langue">Anglais</p>
                                 <div class="text">
-                                    <img src="../assets/icons/done--dark.svg" alt="close icon">
+                                    <img src="../../assets/icons/done--dark.svg" alt="close icon">
                                 </div>
                                 <div class="audio">
-                                    <img src="../assets/icons/close.svg" alt="done icon">
+                                    <img src="../../assets/icons/close.svg" alt="done icon">
                                 </div>
                             </div>
                             <div class="lrow">
                                 <p class="langue">Espagnol</p>
                                 <div class="text">
-                                    <img src="../assets/icons/done--dark.svg" alt="close icon">
+                                    <img src="../../assets/icons/done--dark.svg" alt="close icon">
                                 </div>
                                 <div class="audio">
-                                    <img src="../assets/icons/close.svg" alt="done icon">
+                                    <img src="../../assets/icons/close.svg" alt="done icon">
                                 </div>
                             </div>
                         </div>
