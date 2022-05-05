@@ -5,17 +5,6 @@ $title = "login-register";
 $css = "login";
 require '../components/head.php';
 
-// Connection à la BD
-$link = new mysqli("localhost", "root", "Bk3dGftO)QiQIPj5", "playtime");
-// Vérifier la connection à la BD
-if ($link->connect_error) {
-    die("Erreur de connection : " . $link->connect_error);
-}
-
-$sql = "SELECT * FROM users";
-$result = $link->query($sql);
-
-$link->close();
 function banner()
 {   
     $result = "";
@@ -60,6 +49,7 @@ function email($type) {
         }
     }
 }
+
 ?>
 <body>
 
@@ -82,8 +72,7 @@ function email($type) {
         <div class="login">
             <h2>Se connecter</h2>
             <form action="../scripts/login.php" method="POST">
-                <input required type="<?= email("login") ?>"  name="email" placeholder="email"
-                 pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" id="email-login" onchange="verify()">
+                <input required type="email"  name="email" placeholder="<?= email("login") ?>" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" id="email-login" onchange="verify()">
                 <input required type="password" name="pwd" id="pwd-login" placeholder="Mot de passe" onchange="verify()">
                 <p class="text text-base xlmt">Mot de passe oublié ? <a class="text-p500 underline" href="mailto:support@playtime.fr">Contactez-nous</a>
                 </p>

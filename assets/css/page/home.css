@@ -30,7 +30,7 @@ header {
 
 .illu {
     justify-content: space-around;
-    padding: 16px;
+    padding: 24px 16px;
 }
 
 .stats {
@@ -83,6 +83,33 @@ header {
 
 .text {
     text-align: center;
+}
+
+
+/* Slider auto */
+.slider_auto {
+    overflow-x: hidden;
+}
+
+.slider__auto {
+    gap: 8px;
+    display: flex;
+    width: 100%;
+
+    width: calc(150px * 8);
+    display: flex;
+    animation: scroll 10s linear infinite;
+    justify-content: space-between;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(calc(-108px * 10));
+    }
 }
 
 @media screen and (min-width: 830px) {

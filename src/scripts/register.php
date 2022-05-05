@@ -1,7 +1,7 @@
 <pre>
     <?php
     SESSION_start();
-    require_once '../class/Database.php';
+    require_once '../interface/main.php';
     // Vérifier la connection à la BD
     if ($link->connect_error) {
         die("Erreur de connection : " . $link->connect_error);

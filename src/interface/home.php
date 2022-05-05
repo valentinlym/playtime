@@ -29,8 +29,19 @@ unset($_SESSION['email-register'], $_SESSION['email-login']);
 
         </div>
         <div class="illu">
-            <div class="slider">
-                <div class="slider__container">
+            <div class="slider_auto">
+                <div class="slider__auto">
+                    <img src="../../assets/img/cover.svg" class="cover">
+                    <img src="../../assets/img/cover.svg" class="cover">
+                    <img src="../../assets/img/cover.svg" class="cover">
+                    <img src="../../assets/img/cover.svg" class="cover">
+                    <img src="../../assets/img/cover.svg" class="cover">
+                    <img src="../../assets/img/cover.svg" class="cover">
+                    <img src="../../assets/img/cover.svg" class="cover">
+                    <img src="../../assets/img/cover.svg" class="cover">
+                    <img src="../../assets/img/cover.svg" class="cover">
+                    <img src="../../assets/img/cover.svg" class="cover">
+                    <!-- Duclication -->
                     <img src="../../assets/img/cover.svg" class="cover">
                     <img src="../../assets/img/cover.svg" class="cover">
                     <img src="../../assets/img/cover.svg" class="cover">

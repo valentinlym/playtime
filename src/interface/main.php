@@ -1,4 +1,5 @@
 <?php
+// Connection à la base de données
 $link = new mysqli("localhost","root","Bk3dGftO)QiQIPj5","playtime");
 
 function getLastId($link): int
@@ -7,4 +8,5 @@ function getLastId($link): int
 	return $link->query($q)->fetch_row()[0];
 }
 
+// Authorisation
 ?>

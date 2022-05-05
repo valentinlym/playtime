@@ -42,7 +42,7 @@ require '../components/head.php';
             </div>
             <div class="stat">
                 <span class="text-2xl lab p200 text-p600">8</span>
-                <p>Nombre de jeux terminé</p>
+                <p>Nombre de jeux terminés</p>
             </div>
         </div>
 

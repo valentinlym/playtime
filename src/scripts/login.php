@@ -2,7 +2,7 @@
 <?php
 print_r($_POST);
 SESSION_start();
-require_once '../class/Database.php';
+require_once '../interface/main.php';
 // Vérifier la connection à la BD
 if ($link->connect_error) {
     die("Erreur de connection : " . $link->connect_error);
@@ -20,7 +20,7 @@ if(
 }
 $email = $_POST['email'];
 $pwd = $_POST['pwd'];
-$_SESSION['email-register'] = $email;
+$_SESSION['email-login'] = $email;
 
 $sql = "SELECT * FROM users WHERE email='".$email."'";
 $result = $link->query($sql);

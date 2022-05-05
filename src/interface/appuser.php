@@ -30,7 +30,7 @@ require '../components/head.php';
             </div>
             <div class="stat">
                 <span class="text-2xl lab p200 text-p600">8</span>
-                <p>Nombre de jeux terminé</p>
+                <p>Nombre de jeux terminés</p>
             </div>
         </div>
 
@@ -63,7 +63,7 @@ require '../components/head.php';
         </details>
         <hr>
         <details>
-            <summary class="text-2xl">Terminé</summary>
+            <summary class="text-2xl">Terminés</summary>
             <div class="slider__container">
                 <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
                 <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
