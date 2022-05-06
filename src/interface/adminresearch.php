@@ -1,14 +1,18 @@
 <?php
-$title = "research";
-$css = "admin";
+$title = "admin • recherche";
+$css = "adminresearch";
+$type = "admin";
 require '../components/head.php';
+require_once '../interface/main.php';
+
 ?>
 
 <body>
+    <!-- TODO: Header / nav bar -->
     <header class="n900">
         <h1 class="title title-4xl text-y100">Admin • Research</h1>
     </header>
-
+<   !-- Header / nav bar -->
     <div class="main">
         <input type="search" placeholder="Recherche dans admin">
         <p class="text-xs text-n600 lab n200 banner">Il est recommandé d'utiliser un écran plus grand pour afficher plus d'éléments.</p>

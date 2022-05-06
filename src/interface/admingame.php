@@ -1,26 +1,29 @@
 <?php
-$title = "game";
-$css = "app";
+$title = "admin • jeu";
+$css = "game";
+$type = "admin";
 require '../components/head.php';
+require_once '../interface/main.php';
 ?>
 
 <body class="n900">
+    <!-- TODO: Header / nav bar -->
     <header class="fb-sb n900">
         <h1 class="title-4xl text-y100">Admin • Game</H1>
     </header>
 
     <nav class="mobile fb fb-sa">
         <a class="home active" href="apphome.html">
-            <img src="../assets/icons/act-home.svg" alt="home icon">
+            <img src="../../assets/icons/act-home.svg" alt="home icon">
         </a>
         <a href="appresearch.html">
-            <img src="../assets/icons/research.svg" alt="esearch icon">
+            <img src="../../assets/icons/research.svg" alt="esearch icon">
         </a>
         <a href="appuser.html">
             <img src="../assets/icons/user.svg" alt="user icon">
         </a>
     </nav>
-
+    <!-- Header / nav bar -->
     <div class="main n50">
         <div class="ghead">
             <div class="cover n300">
@@ -36,19 +39,19 @@ require '../components/head.php';
             <div class="gcta">
                 <div class="gstatus">
                     <div class="gstatus_content">
-                        <img src="../assets/icons/eye-open.svg" alt="eye open icon">
+                        <img src="../../assets/icons/eye-open.svg" alt="eye open icon">
                         <span class="text-sm text-p500">En vue</span>
                     </div>
                 </div>
                 <div class="gstatus">
                     <div class="gstatus_content">
-                        <img src="../assets/icons/rocket.svg" alt="rocket icon">
+                        <img src="../../assets/icons/rocket.svg" alt="rocket icon">
                         <span class="text-sm text-p500">En cours</span>
                     </div>
                 </div>
                 <div class="gstatus">
                     <div class="gstatus_content">
-                        <img src="../assets/icons/done.svg" alt="rocket icon">
+                        <img src="../../assets/icons/done.svg" alt="rocket icon">
                         <span class="text-sm text-p500">Terminer</span>
                     </div>
                 </div>
@@ -108,28 +111,28 @@ require '../components/head.php';
                             <div class="lrow">
                                 <p class="langue">Français</p>
                                 <div class="text">
-                                    <img src="../assets/icons/done--dark.svg" alt="close icon">
+                                    <img src="../../assets/icons/done--dark.svg" alt="close icon">
                                 </div>
                                 <div class="audio">
-                                    <img src="../assets/icons/done--dark.svg" alt="done icon">
+                                    <img src="../../assets/icons/done--dark.svg" alt="done icon">
                                 </div>
                             </div>
                             <div class="lrow">
                                 <p class="langue">Anglais</p>
                                 <div class="text">
-                                    <img src="../assets/icons/done--dark.svg" alt="close icon">
+                                    <img src="../../assets/icons/done--dark.svg" alt="close icon">
                                 </div>
                                 <div class="audio">
-                                    <img src="../assets/icons/close.svg" alt="done icon">
+                                    <img src="../../assets/icons/close.svg" alt="done icon">
                                 </div>
                             </div>
                             <div class="lrow">
                                 <p class="langue">Espagnol</p>
                                 <div class="text">
-                                    <img src="../assets/icons/done--dark.svg" alt="close icon">
+                                    <img src="../../assets/icons/done--dark.svg" alt="close icon">
                                 </div>
                                 <div class="audio">
-                                    <img src="../assets/icons/close.svg" alt="done icon">
+                                    <img src="../../assets/icons/close.svg" alt="done icon">
                                 </div>
                             </div>
                         </div>

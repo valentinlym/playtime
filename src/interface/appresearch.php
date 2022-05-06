@@ -1,7 +1,10 @@
 <?php
 $title = "recherche";
 $css = "appresearch";
+$type = "app";
 require '../components/head.php';
+require_once '../interface/main.php';
+
 ?>
 
 <body class="n900">

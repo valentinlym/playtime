@@ -1,7 +1,9 @@
 <?php
 $title = "404";
-$css = "";
+$css = "404";
+$type = "global";
 require '../components/head.php';
+require_once '../interface/main.php';
 ?>
 
 <body>
@@ -9,7 +11,7 @@ require '../components/head.php';
     <img src="../../assets/img/logo.svg" alt="logo de play time">
   </header>
   <div class="flex-center">
-
+  <?= banner() ?>
     <div class="main">
       <div class="main__img">
         <span class="img404">404<br>('⌓')</span>

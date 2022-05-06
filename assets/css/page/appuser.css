@@ -4,12 +4,45 @@ body .main {
 .uheader {
     margin-bottom: 16px;
 }
+/* avatars */
 .avatar {
     width: 100px;
     height: 100px;
     border-radius: 999px;
     margin-right: 8px;
 }
+.zelda {
+    background: url(../../img/pp-zelda.jpg);
+}
+.glados {
+    background: url(../../img/pp-glados.jpg);
+}
+.peach {
+    background: url(../../img/pp-peach.jpg);
+}
+.samus {
+    background: url(../../img/pp-samus.jpg);
+}
+.lara-croft {
+    background: url(../../img/pp-lara-croft.jpg);
+}
+.madeline {
+    background: url(../../img/pp-madeline.jpg);
+}
+.mipha {
+    background: url(../../img/pp-mipha.jpg);
+}
+.yennefer {
+    background: url(../../img/pp-yennefer.jpg);
+}
+.chloe-frazer {
+    background: url(../../img/pp-chloe-frazer.jpg);
+}
+.aloy {
+    background: url(../../img/pp-aloy.jpg);
+}
+/* TODO: ajouter les image "peach", "samus","mipha", "yennefer"*/
+
 .stats {
     text-align: center;
     margin-bottom: 8px;

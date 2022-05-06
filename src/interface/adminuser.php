@@ -1,11 +1,14 @@
 <?php
-$title = "user";
-$css = "app";
+$title = "admin • utilisateur";
+$css = "appuser";
+$type = "admin";
 require '../components/head.php';
+require_once '../interface/main.php';
+
 ?>
 
 <body class="n900">
-
+    <!-- TODO: Header / nav bar -->
     <header class="fb-sb n900">
         <h1 class="title-4xl text-y100">Admin • User</H1>
     </header>
@@ -21,7 +24,7 @@ require '../components/head.php';
             <img src="../assets/icons/act-user.svg" alt="user icon">
         </a>
     </nav>
-
+    <!-- Header / nav bar -->
     <div class="main n50">
         <div class="uheader fb fb-cross">
             <div class="avatar n300">
