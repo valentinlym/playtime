@@ -1,4 +1,5 @@
 <?php
+$type="global";
 require_once '../interface/main.php';
 
 // Vérification des données
@@ -22,6 +23,7 @@ $result = $link->query($sql);
 if($result->num_rows==1){
     $pwd_hash = (($result->fetch_row()[3]));
     if(password_verify($pwd,$pwd_hash)){ // L'utilisateur s'est connecté correctement.
+        unset($_SESSION['email-login']);
         getUser($link, $email);
         $link->close();
         // Redirection

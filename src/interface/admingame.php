@@ -7,23 +7,9 @@ require_once '../interface/main.php';
 ?>
 
 <body class="n900">
-    <!-- TODO: Header / nav bar -->
-    <header class="fb-sb n900">
-        <h1 class="title-4xl text-y100">Admin • Game</H1>
-    </header>
-
-    <nav class="mobile fb fb-sa">
-        <a class="home active" href="apphome.html">
-            <img src="../../assets/icons/act-home.svg" alt="home icon">
-        </a>
-        <a href="appresearch.html">
-            <img src="../../assets/icons/research.svg" alt="esearch icon">
-        </a>
-        <a href="appuser.html">
-            <img src="../assets/icons/user.svg" alt="user icon">
-        </a>
-    </nav>
-    <!-- Header / nav bar -->
+    <?php require '../components/header.php';
+    echo banner();
+    ?>
     <div class="main n50">
         <div class="ghead">
             <div class="cover n300">
@@ -171,6 +157,14 @@ require_once '../interface/main.php';
             </div>
         </form>
     </div>
+    <script>
+        let banner = document.querySelector('.banner-box');
+        if(banner != null){
+            banner.addEventListener("click", function(){
+                banner.style.display = 'none';
+            });
+        }
+    </script>
 </body>
 
 </html>

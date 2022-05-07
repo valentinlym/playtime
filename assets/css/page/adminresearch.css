@@ -1,4 +1,4 @@
-.main {
+body .main {
     padding: 24px 16px 0 16px  ;
 }
 
@@ -17,8 +17,6 @@
 /* .table */
 .table {
     margin-top: 8px;
-    /* DEBUG */
-    /* background: var(--p50);  */
 }
 .theader {
     font-family: 'Inter';

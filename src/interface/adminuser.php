@@ -8,23 +8,9 @@ require_once '../interface/main.php';
 ?>
 
 <body class="n900">
-    <!-- TODO: Header / nav bar -->
-    <header class="fb-sb n900">
-        <h1 class="title-4xl text-y100">Admin • User</H1>
-    </header>
-
-    <nav class="mobile fb fb-sa">
-        <a class="home active" href="apphome.html">
-            <img src="../assets/icons/home.svg" alt="home icon">
-        </a>
-        <a href="appresearch.html">
-            <img src="../assets/icons/research.svg" alt="esearch icon">
-        </a>
-        <a href="appuser.html">
-            <img src="../assets/icons/act-user.svg" alt="user icon">
-        </a>
-    </nav>
-    <!-- Header / nav bar -->
+    <?php require '../components/header.php';
+    echo banner();
+    ?>
     <div class="main n50">
         <div class="uheader fb fb-cross">
             <div class="avatar n300">
@@ -53,10 +39,8 @@ require_once '../interface/main.php';
             <h2>Paramètres</h2>
             <span class="lab g200 text-g600">User</span>
             <span class="lab n200 text-n600">Admin</span>
-            <form class="fb fb-dc" action="user-settings.php" method="POST">
-                <!-- TODO: avatar select -->
+            <form class="fb fb-dc" action="user-settings.php?type=admin" method="POST">
                 <input type="text" name="pseudo" placeholder="{old-pseudo}" id="pseudo">
-                <input type="email" name="email" placeholder="{old-email}" id="email" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
                 <input type="password" name="pwd" id="pwd" placeholder="Nouveau Mot de passe" id="pwd1">
                 <input type="password" name="pwdC" id="pwdC" placeholder="Mot de passe (confirmation)" id="pwd2">
                 <div class="fb fb-sb fb-cross">
@@ -66,5 +50,13 @@ require_once '../interface/main.php';
             </form>
         </div>
     </div>
+    <script>
+        let banner = document.querySelector('.banner-box');
+        if(banner != null){
+            banner.addEventListener("click", function(){
+                banner.style.display = 'none';
+            });
+        }
+    </script>
 </body>
 </html>

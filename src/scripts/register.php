@@ -1,17 +1,10 @@
 <?php
+$type="global";
 require_once '../interface/main.php';
 // Vérification des données
-if (
-    !(preg_match('/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/', $_POST['email'])) ||
-    empty($_POST['pwd1']) ||
-    empty($_POST['pwd2'])
-) {
-    $_SESSION['error'] = "Le formulaire n'a pas été rempli correctement";
-    $link->close();
-    // Redirection
-    header("Location: ../interface/login.php");
-    die();
-}
+$pwd1 = $_POST['pwd1'];
+$pwd2 = $_POST['pwd2'];
+verify($link,"login.php",true,false,$pwd1,$pwd2);
 
 $_SESSION['email-register'] = $_POST['email'];
 
@@ -24,17 +17,11 @@ if ($result->num_rows > 0) {
     // Redirection
     header("Location: ../interface/login.php");
     die();
-} else if ($_POST['pwd1'] != $_POST['pwd2']) {
-    $_SESSION['error'] = "Vous avez saisi deux mots de passe différents";
-    $link->close();
-    // Redirection
-    header("Location: ../interface/login.php");
-    die();
 } else {
-    $name = ["zelda", "glados", "peach", "samus", "lara-croft", "madeline", "mipha", "yennefer", "chloe-frazer", "aloy"];
+    $name = ["zelda", "glados", "lara-croft", "madeline", "chloe-frazer", "aloy"];
 
     $email = $_POST['email'];
-    $pseudo = $name[rand(0, 9)];
+    $pseudo = $name[rand(0, 5)];
     $_SESSION['pwd'] = $_POST['pwd1'];
     $pwd_hash = (password_hash($_POST['pwd1'], PASSWORD_DEFAULT));
     $_SESSION['pwd_hash'] = (password_hash($_POST['pwd1'], PASSWORD_DEFAULT));
@@ -43,8 +30,7 @@ if ($result->num_rows > 0) {
     print_r($sql);
     $link->query($sql);
     $_SESSION['success'] =  "Céation de votre compte terminé";
-    $_SESSION['email'] = $email;
-    $_SESSION['role'] = $result->fetch_row()[5];
+    getUser($link,$email);
     $link->close();
     header("Location: ../interface/apphome.php");
     die();

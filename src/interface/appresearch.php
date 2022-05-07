@@ -10,7 +10,8 @@ require_once '../interface/main.php';
 <body class="n900">
 
     <?php
-    require '../components/header.php'
+    require '../components/header.php';
+    echo banner();
     ?>
 
     <div class="main n50">

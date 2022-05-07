@@ -9,10 +9,10 @@ require_once '../interface/main.php';
 <body class="n900">
 
     <?php
-    require '../components/header.php'
-    ?>
+    require '../components/header.php';?>
 
     <div class="main n50">
+        <?= banner() ?>
         <div class="uheader fb fb-cross">
             <div class="avatar n300 <?= $_SESSION['avatar'] ?> ">
             </div>
@@ -86,21 +86,30 @@ require_once '../interface/main.php';
         <hr>
         <div class="settings">
             <h2>Paramètres</h2>
-            <form class="fb fb-dc" action="user-settings.php" method="POST">
-                <!-- TODO: avatar select -->
+            <form class="fb fb-dc" action="../scripts/user-settings.php?type=app" method="POST">
                 <input type="text" name="pseudo" placeholder="<?= htmlentities($_SESSION['pseudo']) ?>" id="pseudo">
-                <input type="email" name="email" placeholder="<?= htmlentities($_SESSION['email']) ?>" id="email" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
-                <input type="password" name="pwd" id="pwd" placeholder="Nouveau mot de passe" id="pwd1">
-                <input type="password" name="pwdC" id="pwdC" placeholder="Mot de passe (confirmation)" id="pwd2">
+                <input type="password" name="pwd1" placeholder="Nouveau mot de passe">
+                <input type="password" name="pwd2" placeholder="Mot de passe (confirmation)">
                 <hr>
-                <input required type="password" name="pwdC" id="pwdC" placeholder="Mot de passe (actuel)" id="pwd2">
+                <input required type="password" name="pwd" placeholder="Mot de passe (actuel)">
                 <p class="text-xs text-n400">Obligatoire.</p>
                 <div class="fb fb-sb fb-cross">
-                    <a href="#" class="btn btn__linkdanger"> Supprimer</a>
-                    <button type="submit" class="btn btn__secondary" id="btn1">Enregistrer</button>
+                    <div>
+                        <a href="../scripts/delete-user.php" class="btn btn__linkdanger" <?= ($_SESSION['iduser']==1)?'style="display: none;"':"" ?>  >Supprimer</a>
+                        <a href="../scripts/logout.php" class="btn btn__linkdanger">Déconexion</a>
+                    </div>
+                    <button type="submit" name="type" value="app" class="btn btn__secondary" id="btn1">Enregistrer</button>
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        let banner = document.querySelector('.banner-box');
+        if(banner != null){
+            banner.addEventListener("click", function(){
+                banner.style.display = 'none';
+            });
+        }
+    </script>
 </body>
 </html>

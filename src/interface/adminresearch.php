@@ -8,11 +8,10 @@ require_once '../interface/main.php';
 ?>
 
 <body>
-    <!-- TODO: Header / nav bar -->
-    <header class="n900">
-        <h1 class="title title-4xl text-y100">Admin • Research</h1>
-    </header>
-<   !-- Header / nav bar -->
+    <?php
+    require '../components/header.php';
+    echo banner();
+    ?>
     <div class="main">
         <input type="search" placeholder="Recherche dans admin">
         <p class="text-xs text-n600 lab n200 banner">Il est recommandé d'utiliser un écran plus grand pour afficher plus d'éléments.</p>
@@ -29,14 +28,14 @@ require_once '../interface/main.php';
                 <p class="ttype">Type</p>
             </div>
             <div class="tbody">
-                <a href="#">
+                <a href="adminuser.php">
                     <div class="trow fb-cross">
                         <p class="tname">joe.deo@exemple.com</p>
                         <p class="tid">87</p>
                         <span class="ttype">User</span>
                     </div>
                 </a>
-                <a href="#">
+                <a href="admingame.php">
                     <div class="trow fb-cross">
                         <p class="tname">The legend of zelda breath of the wild</p>
                         <p class="tid">892</p>
@@ -53,6 +52,14 @@ require_once '../interface/main.php';
             </div>
         </div>
     </div>
+    <script>
+        let banner = document.querySelector('.banner-box');
+        if(banner != null){
+            banner.addEventListener("click", function(){
+                banner.style.display = 'none';
+            });
+        }
+    </script>
 </body>
 
 </html>

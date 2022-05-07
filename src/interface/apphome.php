@@ -4,7 +4,6 @@ $css = "apphome";
 $type = "app";
 require '../components/head.php';
 require_once '../interface/main.php';
-
 ?>
 
 <body class="n900">
@@ -142,9 +141,11 @@ require_once '../interface/main.php';
 
     <script>
         let banner = document.querySelector('.banner-box');
-        banner.addEventListener("click", function(){
-            banner.style.display = 'none';
-        });
+        if(banner != null){
+            banner.addEventListener("click", function(){
+                banner.style.display = 'none';
+            });
+        }
     </script>
 </body>
 

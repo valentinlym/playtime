@@ -2,7 +2,6 @@ nav.desktop {
     display: none;
 }
 
-/* Place the navbar at the bottom of the page, and make it stick */
 nav.mobile {
     background-color: var(--n900);
     overflow: hidden;
@@ -13,7 +12,6 @@ nav.mobile {
 }
 
 
-/* Style the links inside the navigation bar */
 nav.mobile a {
     float: left;
     display: block;
@@ -41,7 +39,7 @@ body .main {
     }
 
     nav.desktop {
-        display: block;
+        display: flex;
     }
 
     nav .active {
@@ -50,7 +48,7 @@ body .main {
         color: var(--n50);
     }
 
-    header nav :nth-child(2) {
-        margin: 0 40px;
+    header nav {
+        gap: 20px;
     }
 }

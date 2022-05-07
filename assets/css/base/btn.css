@@ -79,6 +79,7 @@
     border: none;
     text-decoration: underline 2px;
     color: var(--r300);
+    cursor: default;
 }
 
 /* CTA - Status game (gcta > gstatus) */

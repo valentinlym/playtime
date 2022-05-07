@@ -24,5 +24,13 @@ require_once '../interface/main.php';
       </div>
     </div>
   </div>
+  <script>
+        let banner = document.querySelector('.banner-box');
+        if(banner != null){
+            banner.addEventListener("click", function(){
+                banner.style.display = 'none';
+            });
+        }
+    </script>
   </body>
   </html>

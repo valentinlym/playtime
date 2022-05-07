@@ -3,8 +3,7 @@ $title = "home-page";
 $css = "home";
 require '../components/head.php';
 session_start();
-session_unset()
-//unset($_SESSION['email-register'], $_SESSION['email-login']);
+unset($_SESSION['email-register'], $_SESSION['email-login']);
 ?>
 
 <body>
