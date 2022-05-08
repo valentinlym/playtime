@@ -17,7 +17,7 @@ require_once '../interface/main.php';
     <div class="main n50">
         <input type="search" placeholder="Recherche">
         <div class="result fb fb-cross">
-            <h2 class="title title-2xl">Resultat</h2>
+            <h2 class="title title-2xl">Résultat</h2>
             <span class="lab n200 text-n600">+20</span>
         </div>
         <div class="result-game">

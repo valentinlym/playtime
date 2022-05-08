@@ -14,7 +14,7 @@ if ($link->connect_error) {
 //  autorisation
 if ($type!="global") {
     if(isset($_SESSION['admin'])){
-        if(($type == "admin" && $_SESSION['admin'])) {
+        if(($type == "admin" && $_SESSION['admin']!=1)) {
             header("Location: ../interface/404.php");
             die();
         }
@@ -39,20 +39,23 @@ function getLastId($link): int
 	return $link->query($q)->fetch_row()[0];
 }
 
-function getUser($link, string $email): void
+function getUser($link, string $email): array
 {
-	$q = "SELECT * FROM users WHERE email='$email'";
-	$_SESSION['iduser'] =  $link->query($q)->fetch_row()[0]; 
-	$_SESSION['email'] = $link->query($q)->fetch_row()[1];
-	$_SESSION['pseudo'] =   str_replace("-", " ", $link->query($q)->fetch_row()[2]);
-	$_SESSION['password'] =  $link->query($q)->fetch_row()[3];
-	$_SESSION['avatar'] =  $link->query($q)->fetch_row()[4];
-	$_SESSION['admin'] =  $link->query($q)->fetch_row()[5];
+    $q = "SELECT * FROM users WHERE email='$email'";
+    $data = array(
+        'iduser' => $link->query($q)->fetch_row()[0],
+        'email' => $link->query($q)->fetch_row()[1],
+        'pseudo' => str_replace("-", " ", $link->query($q)->fetch_row()[2]),
+        'password' => $link->query($q)->fetch_row()[3],
+        'avatar' => $link->query($q)->fetch_row()[4],
+        'admin' => $link->query($q)->fetch_row()[5]
+    );
+    return $data;
 }
 
-function getCount($link,string $status): int
+function getCount($link,string $id,string $status): int
 {
-	$q = "SELECT * FROM status WHERE typestatus='$status'";
+	$q = "SELECT * FROM status WHERE typestatus='$status' AND fk_iduser='$id'";
 	return $link->query($q)->num_rows;
 }
 

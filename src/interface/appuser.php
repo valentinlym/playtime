@@ -24,19 +24,19 @@ require_once '../interface/main.php';
         <div class="stats fb fb-sa">
             <div class="stat">
                 <span class="text-2xl lab p200 text-p600">
-                <?= getCount($link, "vue") ?>
+                <?= getCount($link,$_SESSION['iduser'],"vue") ?>
                 </span>
                 <p>Nombre de jeux en vue</p>
             </div>
             <div class="stat">
                 <span class="text-2xl lab p200 text-p600">
-                    <?= getCount($link, "cours") ?>
+                    <?= getCount($link,$_SESSION['iduser'],"cours") ?>
                 </span>
                 <p>Nombre de jeux en cours</p>
             </div>
             <div class="stat">
                 <span class="text-2xl lab p200 text-p600">
-                <?= getCount($link, "termie") ?>
+                <?= getCount($link,$_SESSION['iduser'],"termie") ?>
                 </span>
                 <p>Nombre de jeux terminés</p>
             </div>
@@ -88,6 +88,7 @@ require_once '../interface/main.php';
             <h2>Paramètres</h2>
             <form class="fb fb-dc" action="../scripts/user-settings.php?type=app" method="POST">
                 <input type="text" name="pseudo" placeholder="<?= htmlentities($_SESSION['pseudo']) ?>" id="pseudo">
+                <p class="text-xs text-n400">TIPS: Les "-" sont remplacer par des espaces.</p>
                 <input type="password" name="pwd1" placeholder="Nouveau mot de passe">
                 <input type="password" name="pwd2" placeholder="Mot de passe (confirmation)">
                 <hr>
@@ -98,7 +99,7 @@ require_once '../interface/main.php';
                         <a href="../scripts/delete-user.php" class="btn btn__linkdanger" <?= ($_SESSION['iduser']==1)?'style="display: none;"':"" ?>  >Supprimer</a>
                         <a href="../scripts/logout.php" class="btn btn__linkdanger">Déconexion</a>
                     </div>
-                    <button type="submit" name="type" value="app" class="btn btn__secondary" id="btn1">Enregistrer</button>
+                    <button type="submit" class="btn btn__secondary" id="btn1">Enregistrer</button>
                 </div>
             </form>
         </div>

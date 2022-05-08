@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
     print_r($sql);
     $link->query($sql);
     $_SESSION['success'] =  "Céation de votre compte terminé";
-    getUser($link,$email);
+    $_SESSION = getUser($link,$email);
     $link->close();
     header("Location: ../interface/apphome.php");
     die();
