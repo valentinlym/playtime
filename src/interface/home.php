@@ -31,27 +31,27 @@ unset($_SESSION['email-register'], $_SESSION['email-login']);
         <div class="illu">
             <div class="slider_auto">
                 <div class="slider__auto">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
+                    <img src="../../assets/img/cover/albion_online.jpg" class="cover">
+                    <img src="../../assets/img/cover/animal_crossing_new_horizons.jpg" class="cover">
+                    <img src="../../assets/img/cover/deathloop.jpg" class="cover">
+                    <img src="../../assets/img/cover/hollow_knight.jpg" class="cover">
+                    <img src="../../assets/img/cover/elden_ring.jpg" class="cover">
+                    <img src="../../assets/img/cover/factorio.jpg" class="cover">
+                    <img src="../../assets/img/cover/ori_and_the_will_of_the_wisps.jpg" class="cover">
+                    <img src="../../assets/img/cover/the_legend_of_zelda_majora_s_mask.jpg" class="cover">
+                    <img src="../../assets/img/cover/apex_legends.jpg" class="cover">
+                    <img src="../../assets/img/cover/call_of_duty_modern_warfare.jpg" class="cover">
                     <!-- Duclication -->
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
-                    <img src="../../assets/img/cover.svg" class="cover">
+                    <img src="../../assets/img/cover/albion_online.jpg" class="cover">
+                    <img src="../../assets/img/cover/animal_crossing_new_horizons.jpg" class="cover">
+                    <img src="../../assets/img/cover/deathloop.jpg" class="cover">
+                    <img src="../../assets/img/cover/hollow_knight.jpg" class="cover">
+                    <img src="../../assets/img/cover/elden_ring.jpg" class="cover">
+                    <img src="../../assets/img/cover/factorio.jpg" class="cover">
+                    <img src="../../assets/img/cover/ori_and_the_will_of_the_wisps.jpg" class="cover">
+                    <img src="../../assets/img/cover/the_legend_of_zelda_majora_s_mask.jpg" class="cover">
+                    <img src="../../assets/img/cover/apex_legends.jpg" class="cover">
+                    <img src="../../assets/img/cover/call_of_duty_modern_warfare.jpg" class="cover">
                 </div>
             </div>
         </div>

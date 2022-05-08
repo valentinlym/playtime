@@ -15,7 +15,7 @@ require_once '../interface/main.php';
         <div class="slider">
             <h3>Title slider</h3>
             <div class="slider__container">
-                <a href="game.php?path=accueil"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+                <a href="game.php?path=accueil&id=25"><img src="<?= getPathImg("tunic") ?>" alt="" class="cover"></a>
                 <a href="game.php?path=accueil"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
                 <a href="game.php?path=accueil"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
                 <a href="game.php?path=accueil"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>

@@ -1,9 +1,16 @@
 <?php
 $title = "jeu";
 $css = "game";
-(isset($_GET['path'])) ? $path = $_GET['path'] : $path = "";
+$type = "app";
 require '../components/head.php';
-// TODO: Créer une requete sql avec le non du jeu
+require_once '../interface/main.php';
+if(isset($_GET['id']) && isset($_GET['path'])){
+   $data = getGame($link,$_GET['id']);
+   $path = $_GET['path'];
+} else {
+    header("Location: ../interface/404.php");
+    die();
+}
 ?>
 
 <body class="n900">
@@ -55,9 +62,9 @@ require '../components/head.php';
     <div class="main n50">
         <div class="ghead">
             <div class="cover n300">
-                <img src="" alt="">
+                <img src="<?= getPathImg($data['title'])?>" width="100" height="150" alt="">
             </div>
-            <p class="gtitle title-3xl extra-bold cap">Title</p>
+            <p class="gtitle title-3xl extra-bold cap"><?= $data['title'] ?></p>
         </div>
         <div class="gnav">
             <div class="gtag ">
@@ -98,7 +105,7 @@ require '../components/head.php';
                 <hr>
                 <div class="dtag">
                     <p class="text-lg text-n400">Date de sortie :</p>
-                    <p class="text-lg">Mars 2017</p>
+                    <p class="text-lg"><?= $data['date'] ?></p>
                 </div>
                 <div class="dtag">
                     <p class="text-lg text-n400">Genre :</p>
@@ -106,11 +113,7 @@ require '../components/head.php';
                 </div>
                 <div class="dtag">
                     <p class="text-lg text-n400">Développement :</p>
-                    <p class="text-lg">Nintendo</p>
-                </div>
-                <div class="dtag">
-                    <p class="text-lg text-n400">Édition :</p>
-                    <p class="text-lg">Nintendo</p>
+                    <p class="text-lg"><?= $data['developper'] ?></p>
                 </div>
             </div>
 
@@ -119,58 +122,7 @@ require '../components/head.php';
                 <div class="description">
                     <h2 class="title-2xl">Description</h2>
                     <hr>
-                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris
-                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                        velit
-                        esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa
-                        qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-
-                <div class="langues">
-                    <h2>Langues</h2>
-                    <hr>
-                    <div class="ltable">
-                        <div class="lheader lrow">
-                            <br>
-                            <p class="text">Text</p>
-                            <p class="audio">Audio</p>
-                        </div>
-                        <div class="tbody">
-
-                            <div class="lrow">
-                                <p class="langue">Français</p>
-                                <div class="text">
-                                    <img src="../../assets/icons/done--dark.svg" alt="close icon">
-                                </div>
-                                <div class="audio">
-                                    <img src="../../assets/icons/done--dark.svg" alt="done icon">
-                                </div>
-                            </div>
-                            <div class="lrow">
-                                <p class="langue">Anglais</p>
-                                <div class="text">
-                                    <img src="../../assets/icons/done--dark.svg" alt="close icon">
-                                </div>
-                                <div class="audio">
-                                    <img src="../../assets/icons/close.svg" alt="done icon">
-                                </div>
-                            </div>
-                            <div class="lrow">
-                                <p class="langue">Espagnol</p>
-                                <div class="text">
-                                    <img src="../../assets/icons/done--dark.svg" alt="close icon">
-                                </div>
-                                <div class="audio">
-                                    <img src="../../assets/icons/close.svg" alt="done icon">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="text-sm"><?= $data['description'] ?></p>
                 </div>
             </div>
 

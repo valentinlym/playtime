@@ -4,6 +4,14 @@ $css = "appuser";
 $type = "app";
 require '../components/head.php';
 require_once '../interface/main.php';
+
+// En vue
+$gVue = $link->query("SELECT idgame, title FROM status INNER JOIN games ON fk_idgame=idgame WHERE typestatus='vue' AND fk_iduser='".$_SESSION['iduser']."'");
+// En cours
+$gCours = $link->query("SELECT idgame, title FROM status INNER JOIN games ON fk_idgame=idgame WHERE typestatus='cours' AND fk_iduser='".$_SESSION['iduser']."'");
+// Terminé
+$gTermie = $link->query("SELECT idgame, title FROM status INNER JOIN games ON fk_idgame=idgame WHERE typestatus='termine' AND fk_iduser='".$_SESSION['iduser']."'");
+
 ?>
 
 <body class="n900">
@@ -45,42 +53,49 @@ require_once '../interface/main.php';
         <details>
             <summary class="text-2xl">En vue</summary>
             <div class="slider__container">
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <?php
+                if($gVue->num_rows>0){
+                    while (list($idgame, $title) = $gVue->fetch_row()) {
+                        $path = getPathImg($title);
+                        echo <<<HTML
+                        <a href="game.php?path=utilisateur&id=$idgame"><img src="$path" alt="$title" class="cover"></a>
+                        HTML;
+                    }
+                }
+            ?>
+                
             </div>
         </details>
         <hr>
         <details>
             <summary class="text-2xl">En cours</summary>
             <div class="slider__container">
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <?php
+                if($gCours->num_rows>0){
+                    while (list($idgame, $title) = $gCours->fetch_row()) {
+                        $path = getPathImg($title);
+                        echo <<<HTML
+                        <a href="game.php?path=utilisateur&id=$idgame"><img src="$path" alt="$title" class="cover"></a>
+                        HTML;
+                    }
+                }
+            ?>
             </div>
         </details>
         <hr>
         <details>
             <summary class="text-2xl">Terminés</summary>
             <div class="slider__container">
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
-                <a href="game.php?path=utilisateur"><img src="../../assets/img/cover.svg" alt="" class="cover"></a>
+            <?php
+                if($gTermie->num_rows>0){
+                    while (list($idgame, $title) = $gTermie->fetch_row()) {
+                        $path = getPathImg($title);
+                        echo <<<HTML
+                        <a href="game.php?path=utilisateur&id=$idgame"><img src="$path" alt="$title" class="cover"></a>
+                        HTML;
+                    }
+                }
+            ?>
             </div>
         </details>
         <hr>

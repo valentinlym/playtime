@@ -53,6 +53,19 @@ function getUser($link, string $email): array
     return $data;
 }
 
+function getGame($link, string $idgame): array
+{
+    $q = "SELECT * FROM games WHERE idgame='$idgame'";
+    $data = array(
+        'idgame' => $link->query($q)->fetch_row()[0],
+        'title' => $link->query($q)->fetch_row()[1],
+        'description' => $link->query($q)->fetch_row()[2],
+        'date' => $link->query($q)->fetch_row()[3],
+        'developper' => $link->query($q)->fetch_row()[4]
+    );
+    return $data;
+}
+
 function getCount($link,string $id,string $status): int
 {
 	$q = "SELECT * FROM status WHERE typestatus='$status' AND fk_iduser='$id'";
@@ -122,6 +135,11 @@ function verify($link,string $page,bool $email=false,bool $pwd=false,$pwd1=null,
         header("Location: ../interface/$page");
         die();
     }
+}
+
+function getPathImg($title)
+{
+    return "../../assets/img/cover/".str_replace(" ", "_", $title).".jpg";
 }
 
 ?>
