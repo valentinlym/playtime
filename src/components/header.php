@@ -17,14 +17,12 @@ function navAdmin($type, $css)
     } else {
         if ($_SESSION['admin']==1) {
             if ($type == "admin") {
-                echo "03";
                 return <<<HTML
                 <a href="adminresearch.php">
                 <img src="../../assets/icons/act-admin.svg" alt="user icon">
                 </a>
 HTML;
             } else {
-                echo "04";
                 return <<<HTML
                 <a href="adminresearch.php">
                 <img src="../../assets/icons/admin.svg" alt="user icon">

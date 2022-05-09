@@ -50,6 +50,10 @@ header {
 }
 .gstatus {
     margin-bottom: 16px;
+    cursor: default;
+}
+.gstatus:hover {
+    border: none;
 }
 .icon {
     background: var(--n300);

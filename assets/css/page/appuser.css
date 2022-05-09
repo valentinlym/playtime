@@ -1,5 +1,6 @@
 body .main {
     padding-right: 12px;
+    min-height: 90vh;
 }
 .uheader {
     margin-bottom: 16px;

@@ -56,12 +56,35 @@ function getUser($link, string $email): array
 function getGame($link, string $idgame): array
 {
     $q = "SELECT * FROM games WHERE idgame='$idgame'";
+    
+    $result = $link->query("SELECT DISTINCT fk_categorie FROM games INNER JOIN games_details ON idgame=fk_idgame WHERE idgame='$idgame'");
+    $categories = array();
+    while ($categorie = $result->fetch_column(0)) {
+            $categories[] = $categorie;
+    }
+
+    $platforms = array();
+    $result = $link->query("SELECT DISTINCT fk_platform FROM games INNER JOIN games_details ON idgame=fk_idgame WHERE idgame='$idgame'");
+    while ($platform = $result->fetch_column(0)) {
+        $platforms[] = $platform;
+    }
+    // Status
+    $sql = "SELECT typestatus FROM status WHERE fk_idgame='$idgame' AND fk_iduser='".$_SESSION['iduser']."'";
+    if($link->query($sql)->num_rows==0){
+        $status = "";
+    } else{
+        $status = $link->query($sql)->fetch_row()[0];
+    }
+
     $data = array(
         'idgame' => $link->query($q)->fetch_row()[0],
         'title' => $link->query($q)->fetch_row()[1],
         'description' => $link->query($q)->fetch_row()[2],
         'date' => $link->query($q)->fetch_row()[3],
-        'developper' => $link->query($q)->fetch_row()[4]
+        'developper' => $link->query($q)->fetch_row()[4],
+        'categories'   => $categories,
+        'platforms' => $platforms,
+        'status' => $status
     );
     return $data;
 }

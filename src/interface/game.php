@@ -4,6 +4,7 @@ $css = "game";
 $type = "app";
 require '../components/head.php';
 require_once '../interface/main.php';
+
 if(isset($_GET['id']) && isset($_GET['path'])){
    $data = getGame($link,$_GET['id']);
    $path = $_GET['path'];
@@ -11,6 +12,7 @@ if(isset($_GET['id']) && isset($_GET['path'])){
     header("Location: ../interface/404.php");
     die();
 }
+$_SESSION['data-status'] = $data['status'];
 ?>
 
 <body class="n900">
@@ -62,34 +64,51 @@ if(isset($_GET['id']) && isset($_GET['path'])){
     <div class="main n50">
         <div class="ghead">
             <div class="cover n300">
-                <img src="<?= getPathImg($data['title'])?>" width="100" height="150" alt="">
+                <img src="<?= getPathImg($data['title'])?>" width="100" height="150" alt="<?= $data['title']?>">
             </div>
             <p class="gtitle title-3xl extra-bold cap"><?= $data['title'] ?></p>
         </div>
         <div class="gnav">
             <div class="gtag ">
-                <span class="lab text-sm text-n600 n200">Switch</span>
-                <span class="lab text-sm text-n600 n200">Wii U</span>
+                <?php 
+                foreach($data['categories'] as $categorie){
+
+                    echo <<<HTML
+                <span class="lab text-sm text-n600 n200">$categorie</span>
+                HTML;
+                }
+                ?>
+            </div>
+            <br>
+            <div class="gtag ">
+                <?php 
+                foreach($data['platforms'] as $platform){
+
+                    echo <<<HTML
+                <span class="lab text-sm text-y600 y200">$platform</span>
+                HTML;
+                }
+                ?>
             </div>
             <div class="gcta">
-                <div class="gstatus active">
-                    <a href="?status=0">
+                <div class="gstatus <?= ($data['status']=="vue")?"active":"" ?>">
+                    <a href="../scripts/status.php?status=vue&path=<?=$path?>&id=<?=$data['idgame']?>">
                         <div class="gstatus_content">
                             <img src="../../assets/icons/eye-open.svg" alt="eye open icon">
                             <span class="gstatus-vue text-sm text-p500">En vue</span>
                         </div>
                     </a>
                 </div>
-                <div class="gstatus">
-                    <a href="?status=1">
+                <div class="gstatus <?= ($data['status']=="cours")?"active":"" ?>">
+                    <a href="../scripts/status.php?status=cours&path=<?=$path?>&id=<?=$data['idgame']?>">
                         <div class="gstatus_content">
                             <img src="../../assets/icons/rocket.svg" alt="rocket icon">
                             <span class="text-sm text-p500">En cours</span>
                         </div>
                     </a>
                 </div>
-                <div class="gstatus">
-                    <a href="?status=3">
+                <div class="gstatus <?= ($data['status']=="termine")?"active":"" ?>">
+                    <a href="../scripts/status.php?status=termine&path=<?=$path?>&id=<?=$data['idgame']?>">
                         <div class="gstatus_content">
                             <img src="../../assets/icons/done.svg" alt="rocket icon">
                             <span class="text-sm text-p500">Terminer</span>
@@ -106,10 +125,6 @@ if(isset($_GET['id']) && isset($_GET['path'])){
                 <div class="dtag">
                     <p class="text-lg text-n400">Date de sortie :</p>
                     <p class="text-lg"><?= $data['date'] ?></p>
-                </div>
-                <div class="dtag">
-                    <p class="text-lg text-n400">Genre :</p>
-                    <p class="text-lg">Action Aventure, Open-World</p>
                 </div>
                 <div class="dtag">
                     <p class="text-lg text-n400">Développement :</p>

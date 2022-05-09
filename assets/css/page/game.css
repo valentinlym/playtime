@@ -1,5 +1,6 @@
 body .main {
     padding-right: 12px;
+    min-height: 90vh;
 }
 
 .ghead {
@@ -8,7 +9,10 @@ body .main {
     grid-template-rows: 150px;
     margin-bottom: 16px;
 }
-
+.gtag {
+    display: flex;
+    gap: 8px;
+}
 .gcta {
     margin: 8px 0;
 }

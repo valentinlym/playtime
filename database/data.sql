@@ -29,4 +29,10 @@ INSERT INTO `playtime`.`games` (`idgame`, `title`, `description`, `releasedate`,
  ('28', 'bioshock 2', 'BioShock 2 est un jeu vidéo de tir en vue subjective développé par 2K Marin et édité par 2K Games, sorti le 9 février 2010. Il s\'agit de la suite du jeu BioShock sorti fin août 2007 . Le jeu se déroule dans la ville sous-marine de Rapture, en 1968, huit ans après les événements relatés dans BioShock.', '9 février 2010', '2k Marin'),
  ('29', 'bioshock infinite', 'BioShock Infinite se déroule en 1912 et se déroule dans une cité-état steampunk fictive appelée \"Columbia\" - nommée en hommage à la personnification féminine des États-Unis - qui est suspendue dans les airs grâce à une combinaison de dirigeables géants, de ballons, de réacteurs, hélices et \"lévitation quantique\".', '26 mars 2013', 'Irrational Games');;
 
- INSERT INTO `playtime`.`status` ('typestatus', 'fk_iduser', 'fk_idgame') VALUES ('vue', '1', '25'), ('cours', '1', '14'), ('termmie', '1', '5');; 
+INSERT INTO `playtime`.`status` ('typestatus', 'fk_iduser', 'fk_idgame') VALUES ('vue', '1', '25'), ('cours', '1', '14'), ('termmie', '1', '5');; 
+ 
+INSERT INTO `playtime`.`platforms` (`platform`) VALUES ('switch'), ('wii u'), ('xbox 360'),('xbox one'),('xbox series'),('macos'),('windows'),('linus'),('ps4'),('ps5'),('android'),('ios'),('stadia');; 
+
+INSERT INTO `playtime`.`categories` (`categorie`) VALUES ('action'), ('co-op'), ('RPG'),('solo'),('aventure'),('indé'),('simulation'),('sport'),('course'),('FPS'),('multijoueur'),('2D');;
+
+INSERT INTO `playtime`.`games_details` (`fk_idgame`,`fk_categorie`,`fk_platform`) VALUES ('25','RPG','windows'),('25','action','xbox series'),('25','solo','xbox one');;

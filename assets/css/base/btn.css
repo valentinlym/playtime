@@ -94,19 +94,20 @@
     width: 109px;
     height: 72px;
     border-radius: 6px;
-    background: var(--p100);
+    background: var(--n200);
     cursor: pointer;
 }
 .gstatus.active{
+    background: var(--p100);
+}
+.gstatus.active:hover{
+    background: var(--p100);
     border: none;
 }
 .gstatus_content {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.stats.gstatus {
-    cursor: default;
 }
 .gstatus img {
     width: 24px;

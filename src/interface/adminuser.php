@@ -34,7 +34,7 @@ if(isset($_GET['email'])){
                 <p>Nombre de jeux en cours</p>
             </div>
             <div class="stat">
-                <span class="text-2xl lab p200 text-p600"><?= getCount($link, $data['iduser'], 'termie') ?></span>
+                <span class="text-2xl lab p200 text-p600"><?= getCount($link, $data['iduser'], 'termine') ?></span>
                 <p>Nombre de jeux terminés</p>
             </div>
         </div>

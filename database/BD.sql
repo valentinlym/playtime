@@ -29,8 +29,8 @@ CREATE TABLE games (
 
 CREATE TABLE games_details (
     fk_idgame INT(11) NOT NULL,
-    fk_categorie VARCHAR(30) NOT NULL,
-    fk_platform VARCHAR(30) NOT NULL,
+    fk_categorie VARCHAR(30),
+    fk_platform VARCHAR(30),
     FOREIGN KEY (fk_idgame) REFERENCES games(idgame),
     FOREIGN KEY (fk_categorie) REFERENCES categories(categorie),
     FOREIGN KEY (fk_platform) REFERENCES platforms(platform)
