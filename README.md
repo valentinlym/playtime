@@ -12,14 +12,7 @@ Play Time est un outil permettant aux passionnés de jeux vidéo de faire un sui
 
 [Lien vers la maquette Figma >](https://www.figma.com/file/pEKLkBvn3iywiX5mLdoV8U?node-id=9:2)
 
-## Avancement du projet
+## Config BD
 
-Retrouver les versions sorties et en cours de développement dans ce [Notion >](https://valentinlym.notion.site/Play-Time-V-0-1-1f001d2f33534fedb96affc84a21fc2a)
-
-## Php Doc
-
-Possibilité de générer la Php doc via la commande suivante :
-
-```bash
-$ php phpDocumentor.phar -d . -t docs/api
-```
+La configuration de la BD se fait dans le fichier ```main.php``` (il se trouve dans src > interface > main.php)
+Les divers fichiers .sql se trouvent le répertoire ```database```.

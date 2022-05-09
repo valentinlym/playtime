@@ -4,8 +4,8 @@ $css = "game";
 $type = "admin";
 require '../components/head.php';
 require_once '../interface/main.php';
-if(isset($_GET['id'])){
-    $data = getGame($link,$_GET['id']);
+if (isset($_GET['id'])) {
+    $data = getGame($link, $_GET['id']);
 } else {
     header("Location: ../interface/404.php");
     die();
@@ -19,14 +19,14 @@ if(isset($_GET['id'])){
     <div class="main n50">
         <div class="ghead">
             <div class="cover n300">
-                <img src="<?= getPathImg($data['title'])?>" width="100" height="150" alt="<?= $data['title']?>">
+                <img src="<?= getPathImg($data['title']) ?>" width="100" height="150" alt="<?= $data['title'] ?>">
             </div>
             <p class="gtitle title-3xl extra-bold cap"><?= $data['title'] ?></p>
         </div>
         <div class="gnav">
-        <div class="gtag ">
-                <?php 
-                foreach($data['categories'] as $categorie){
+            <div class="gtag ">
+                <?php
+                foreach ($data['categories'] as $categorie) {
 
                     echo <<<HTML
                 <span class="lab text-sm text-n600 n200">$categorie</span>
@@ -36,8 +36,8 @@ if(isset($_GET['id'])){
             </div>
             <br>
             <div class="gtag ">
-                <?php 
-                foreach($data['platforms'] as $platform){
+                <?php
+                foreach ($data['platforms'] as $platform) {
 
                     echo <<<HTML
                 <span class="lab text-sm text-y600 y200">$platform</span>
@@ -72,40 +72,24 @@ if(isset($_GET['id'])){
             </div>
         </div>
         <hr>
-        <form class="fb fb-dc" action="game.php" method="POST">
-            <h2>Paramètre</h2>
-            <input type="text" name="title" placeholder="{old-title}">
-            <input type="date" name="title">
-            <select multiple name="category" id="gategory" size="4">
-                <option value="aventure">Aventure</option>
-                <option value="action">action</option>
-                <option value="inde">Inde</option>
-                <option value="MMORPG">MMORPG</option>
-            </select>
-            <select multiple name="developer" id="developer" size="2">
-                <option value="nitendo">Nintendo</option>
-                <option value="ubisoft">Ubisoft</option>
-            </select>
-            <select multiple name="edition" id="edition" size="2">
-                <option value="nintendo">Nintendo</option>
-                <option value="ubisoft">Ubisoft</option>
-            </select>
-            <textarea name="description" id="description" rows="4" maxlength="255" placeholder="Description">
-               
+        <form title="Non fonctionnel" class="fb fb-dc" action="game.php" method="POST">
+            <h2 class="text-r300">Paramètre (Non fonctionnel)</h2>
+            <input disabled type="text" name="title" placeholder="<?= $data['title'] ?>">
+            <textarea  disabled name="description" id="description" rows="4" maxlength="255" placeholder="Description">
+
             </textarea>
             <div class="text-lg">
-                <input type="checkbox" id="newgame"><label class="newgame" for="newgame">Nouveau jeu</label>
+                <input disabled type="checkbox" id="newgame"><label class="newgame" for="newgame">Nouveau jeu</label>
             </div>
-                <div class="fb fb-sb fb-cross">
-                <a href="#" class="btn btn__linkdanger"> Supprimer</a>
-                <button type="submit" class="btn btn__secondary" id="btn1">Enregistrer</button>
+            <div class="fb fb-sb fb-cross">
+                <button disabled type="submit" class="btn btn__secondary" id="btn1">Enregistrer</button>
             </div>
         </form>
     </div>
     <script>
         let banner = document.querySelector('.banner-box');
-        if(banner != null){
-            banner.addEventListener("click", function(){
+        if (banner != null) {
+            banner.addEventListener("click", function() {
                 banner.style.display = 'none';
             });
         }

@@ -5,8 +5,8 @@ $type = "admin";
 require '../components/head.php';
 require_once '../interface/main.php';
 
-$rUsers = $link->query("SELECT iduser, email FROM users");
-$rGames = $link->query("SELECT idgame, title FROM games");
+$rUsers = $link->query("SELECT iduser, email FROM users ORDER BY email ASC");
+$rGames = $link->query("SELECT idgame, title FROM games ORDER BY title ASC");
 
 $nb_result = $rUsers->num_rows + $rGames->num_rows;
 ?>
@@ -17,7 +17,8 @@ $nb_result = $rUsers->num_rows + $rGames->num_rows;
     echo banner();
     ?>
     <div class="main">
-        <input type="search" placeholder="Recherche dans admin">
+        <!--  
+            <input type="search" placeholder="Recherche dans admin"> -->
         <p class="text-xs text-n600 lab n200 banner">Il est recommandé d'utiliser un écran plus grand pour afficher plus d'éléments.</p>
         
         <div class="result fb fb-cross">

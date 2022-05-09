@@ -32,7 +32,7 @@ $gTermie = $link->query("SELECT idgame, title FROM status INNER JOIN games ON fk
         <div class="stats fb fb-sa">
             <div class="stat">
                 <span class="text-2xl lab p200 text-p600">
-                <?= getCount($link,$_SESSION['iduser'],"vue") ?>
+                <?= getCount($link,$_SESSION['iduser'],'vue') ?>
                 </span>
                 <p>Nombre de jeux en vue</p>
             </div>
@@ -44,7 +44,7 @@ $gTermie = $link->query("SELECT idgame, title FROM status INNER JOIN games ON fk
             </div>
             <div class="stat">
                 <span class="text-2xl lab p200 text-p600">
-                <?= getCount($link,$_SESSION['iduser'],"termie") ?>
+                <?= getCount($link,$_SESSION['iduser'],"termine") ?>
                 </span>
                 <p>Nombre de jeux terminés</p>
             </div>

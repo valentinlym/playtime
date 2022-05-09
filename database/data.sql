@@ -29,10 +29,13 @@ INSERT INTO `playtime`.`games` (`idgame`, `title`, `description`, `releasedate`,
  ('28', 'bioshock 2', 'BioShock 2 est un jeu vidéo de tir en vue subjective développé par 2K Marin et édité par 2K Games, sorti le 9 février 2010. Il s\'agit de la suite du jeu BioShock sorti fin août 2007 . Le jeu se déroule dans la ville sous-marine de Rapture, en 1968, huit ans après les événements relatés dans BioShock.', '9 février 2010', '2k Marin'),
  ('29', 'bioshock infinite', 'BioShock Infinite se déroule en 1912 et se déroule dans une cité-état steampunk fictive appelée \"Columbia\" - nommée en hommage à la personnification féminine des États-Unis - qui est suspendue dans les airs grâce à une combinaison de dirigeables géants, de ballons, de réacteurs, hélices et \"lévitation quantique\".', '26 mars 2013', 'Irrational Games');;
 
-INSERT INTO `playtime`.`status` ('typestatus', 'fk_iduser', 'fk_idgame') VALUES ('vue', '1', '25'), ('cours', '1', '14'), ('termmie', '1', '5');; 
+INSERT INTO `playtime`.`status` ('typestatus', 'fk_iduser', 'fk_idgame') VALUES ('vue', '1', '25'), ('cours', '1', '14'), ('termine', '1', '5');; 
  
 INSERT INTO `playtime`.`platforms` (`platform`) VALUES ('switch'), ('wii u'), ('xbox 360'),('xbox one'),('xbox series'),('macos'),('windows'),('linus'),('ps4'),('ps5'),('android'),('ios'),('stadia');; 
 
-INSERT INTO `playtime`.`categories` (`categorie`) VALUES ('action'), ('co-op'), ('RPG'),('solo'),('aventure'),('indé'),('simulation'),('sport'),('course'),('FPS'),('multijoueur'),('2D');;
+INSERT INTO `playtime`.`categories` (`categorie`) VALUES ('action'), ('co-op'), ('RPG'),('solo'),('aventure'),('inde'),('simulation'),('sport'),('course'),('FPS'),('multijoueur'),('2D');;
 
 INSERT INTO `playtime`.`games_details` (`fk_idgame`,`fk_categorie`,`fk_platform`) VALUES ('25','RPG','windows'),('25','action','xbox series'),('25','solo','xbox one');;
+
+INSERT INTO `playtime`.`games_details` (`fk_idgame`,`fk_categorie`,`fk_platform`) VALUES 
+ ('1', 'multijoueur', 'android'),('2', 'simulation', 'switch'),('3', 'action', 'windows'),('4', 'action', 'windows'),('5', 'aventure', 'ios'),('6', 'simulation', 'windows'),('7', 'aventure', 'macos'),('8', 'simulation', 'ps4'),('9', 'simulation', 'windows'),('10', 'aventure', 'ps5'),('11', '2D', 'wii u'),('12', 'aventure', 'windows'),('13', 'aventure', 'switch'),('14', 'inde', 'windows'),('15', 'inde', 'xbox one'),('16', 'inde', 'xbox series'),('17', 'aventure', 'ps4'),('18', 'action', 'switch'),('19', 'multijoueur', 'windows'),('20', 'action', 'windows'),('21', 'aventure', 'switch'),('22', 'multijoueur', 'windows'),('23', 'action', 'ps4'),('24', 'action', 'windows'),('25', 'inde', 'xbox one'),('26', 'inde', 'windows'),('27', 'aventure', 'switch'),('28', 'action', 'windows'),('29', 'action', 'windows');;
