@@ -1,7 +1,4 @@
 <?php
-// DEBUG
-error_reporting(E_ALL);
-
 session_start();
 // Connection à la base de données
 $link = new mysqli("localhost","root","Bk3dGftO)QiQIPj5","playtime");
@@ -39,6 +36,13 @@ function getLastId($link): int
 	return $link->query($q)->fetch_row()[0];
 }
 
+/**
+ * getUser
+ *
+ * @param  mysqli $link instance de connextion avec la BD
+ * @param  string $email email de l'utilisateur
+ * @return array
+ */
 function getUser($link, string $email): array
 {
     $q = "SELECT * FROM users WHERE email='$email'";
@@ -53,7 +57,14 @@ function getUser($link, string $email): array
     return $data;
 }
 
-function getGame($link, string $idgame): array
+/**
+ * getGame
+ *
+ * @param  mysqli $link instance de connextion avec la BD
+ * @param  int $idgame id du jeu
+ * @return array
+ */
+function getGame($link,$idgame): array
 {
     $q = "SELECT * FROM games WHERE idgame='$idgame'";
     
@@ -89,12 +100,25 @@ function getGame($link, string $idgame): array
     return $data;
 }
 
+/**
+ * getCount
+ *
+ * @param  mysqli $link instance de connextion avec la BD
+ * @param  int $id l'id de l'utilisateur
+ * @param  string $status le type de statu
+ * @return int
+ */
 function getCount($link,string $id,string $status): int
 {
 	$q = "SELECT * FROM status WHERE typestatus='$status' AND fk_iduser='$id'";
 	return $link->query($q)->num_rows;
 }
 
+/**
+ * banner
+ *
+ * @return void
+ */
 function banner()
 {   
     $result = "";
@@ -126,7 +150,7 @@ HTML;
 /**
  * Permet de vérifier les entrées saisie par l'utilisateur
  * 
- * @param mysqli $link nstance de connextion avec la BD
+ * @param mysqli $link instance de connextion avec la BD
  * @param string $page nom de la page à retourner en cas d'erreur
  * @param bool $email vérifier l'email ?
  * @param bool $pwd vérifier le mot de passe ?
@@ -160,6 +184,12 @@ function verify($link,string $page,bool $email=false,bool $pwd=false,$pwd1=null,
     }
 }
 
+/**
+ * getPathImg
+ *
+ * @param  mixed $title
+ * @return void
+ */
 function getPathImg($title)
 {
     return "../../assets/img/cover/".str_replace(" ", "_", $title).".jpg";
