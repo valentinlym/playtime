@@ -29,15 +29,18 @@ if($_POST['pwd1']!=null && $_POST['pwd2']!=null){
     $pwd2 = $_POST['pwd2'];
     verify($link,$page,false,true,$pwd1,$pwd2);
     $pwd = password_hash($pwd1,PASSWORD_DEFAULT);
+    $admin = $_POST['admin'];
+} elseif($type == "admin" && $_POST['admin']!=$admin){
+    # VERSION 2.0
+    $pwd = password_hash($_POST['pwd'],PASSWORD_DEFAULT);
+    $admin = $_POST['admin'];
 } else {
     verify($link,$page,false,true);
 }
 if($_POST['pseudo']!=null){
     $pseudo = $_POST['pseudo'];
 }
-if($type == "admin" && $_POST['admin']!=$admin){
-    $admin = $_POST['admin'];
-}
+
 $sql = "UPDATE users SET pseudo='$pseudo', password='$pwd', admin='$admin' WHERE email='$email'";
 $link->query($sql);
 if($type == "app"){
