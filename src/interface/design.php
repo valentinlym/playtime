@@ -1,6 +1,7 @@
 <?php
 $title = "design";
 $css = "";
+$type = "global";
 require '../components/head.php';
 ?>
 

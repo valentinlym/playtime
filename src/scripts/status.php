@@ -10,6 +10,7 @@ if(isset($_GET['status'])) {
     if($_SESSION['data-status']!=""){
         if($_SESSION['data-status']===$_GET['status']){
             $link->query("DELETE FROM status WHERE fk_idgame='$id' AND fk_iduser='".$_SESSION['iduser']."'");
+            $link->close();
             // Redirection
             header("Location: ../interface/game.php?path=$path&id=$id");
             die();
@@ -17,28 +18,10 @@ if(isset($_GET['status'])) {
         $link->query("DELETE FROM status WHERE fk_idgame='$id' AND fk_iduser='".$_SESSION['iduser']."'");
     }
     $iduser = $_SESSION['iduser'];
-    switch ($_GET['status']) {
-        case "vue":
-            $q = "INSERT INTO `playtime`.`status` (`typestatus`, `fk_iduser`, `fk_idgame`) VALUES ('vue', $iduser, $id)";
-            $link->query($q);
-            // Redirection
-            header("Location: ../interface/game.php?path=$path&id=$id");
-            die();
-            break;
-        case "cours":
-            $q = "INSERT INTO `playtime`.`status` (`typestatus`, `fk_iduser`, `fk_idgame`) VALUES ('cours', $iduser, $id)";
-            $link->query($q);
-            // Redirection
-            header("Location: ../interface/game.php?path=$path&id=$id");
-            die();
-            break;
-        case "termine":
-            $q = "INSERT INTO `playtime`.`status` (`typestatus`, `fk_iduser`, `fk_idgame`) VALUES ('termine', $iduser, $id)";
-            $link->query($q);
-            // Redirection
-            header("Location: ../interface/game.php?path=$path&id=$id");
-            die();
-            break;
-    }  
+    $q = "INSERT INTO `playtime`.`status` (`typestatus`, `fk_iduser`, `fk_idgame`) VALUES ('".$_GET['status']."', $iduser, $id)";
+    $link->query($q);
+    $link->close();
+    // Redirection
+    header("Location: ../interface/game.php?path=$path&id=$id");
+    die();
 }
-?>

@@ -9,6 +9,8 @@ if(isset($_GET['id']) && isset($_GET['path'])){
    $data = getGame($link,$_GET['id']);
    $path = $_GET['path'];
 } else {
+    $link->close();
+    // Redirection
     header("Location: ../interface/404.php");
     die();
 }

@@ -7,6 +7,8 @@ require_once '../interface/main.php';
 
 // L'utilisateur est-il déja connecter ?
 if (isset($_SESSION['admin'])) {
+    $link->close();
+    // Redirection
     header("Location: ../interface/apphome.php");
 	die();
 }

@@ -7,6 +7,8 @@ require_once '../interface/main.php';
 if (isset($_GET['id'])) {
     $data = getGame($link, $_GET['id']);
 } else {
+    $link->close();
+    // Redirection
     header("Location: ../interface/404.php");
     die();
 }

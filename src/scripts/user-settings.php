@@ -18,6 +18,7 @@ if($type == "app"){
 
 if(!password_verify($_POST['pwd'],$pwd)){
     $_SESSION['error']="Mot de passe incorrect";
+    $link->close();
     // Redirection
     header("Location: ../interface/$page");
     die();
